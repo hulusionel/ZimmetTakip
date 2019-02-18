@@ -46,14 +46,14 @@ namespace ZimmetTakip
             }
         }
 
-        public void Guncelle(string sorgu, string mesaj)
+        public void Guncelle(string sorgu/*, string mesaj*/)
         {
             baglanti.Open();
             SqlCommand cmd_update = new SqlCommand(sorgu, baglanti);
             int kontrol = cmd_update.ExecuteNonQuery();
             if (kontrol > 0)
             {
-                MessageBox.Show(mesaj);
+                //MessageBox.Show(mesaj);
                 baglanti.Close();
             }
         }
