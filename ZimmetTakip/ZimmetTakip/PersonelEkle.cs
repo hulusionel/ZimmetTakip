@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
-using System.Data;
 using System.Drawing;
+using System.Data;
 using System.Text;
 using System.Linq;
 using System.Threading.Tasks;
@@ -11,7 +11,7 @@ using DevExpress.XtraEditors;
 
 namespace ZimmetTakip
 {
-    public partial class PersonelEkle : DevExpress.XtraEditors.XtraForm
+    public partial class PersonelEkle : DevExpress.XtraEditors.XtraUserControl
     {
         DataBaseIslemleri islem = new DataBaseIslemleri();
         public PersonelEkle()

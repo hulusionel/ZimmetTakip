@@ -8,54 +8,36 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
-using System.Data.SqlClient;
-using System.Data;
-using System.Windows.Forms;
 
 namespace ZimmetTakip
 {
     public partial class Admin : DevExpress.XtraEditors.XtraForm
     {
-        DataBaseIslemleri islem = new DataBaseIslemleri();
         public Admin()
         {
             InitializeComponent();
         }
 
-        private void listeleToolStripMenuItem_Click(object sender, EventArgs e)
+        private void btnEkle_Click(object sender, EventArgs e)
         {
-            //panelOrta.Controls.Clear();
-            //PersonelEkle ekle = new PersonelEkle();            
-            //panelOrta.Controls.Add(ekle);
-            //ekle.Show();
-            //ekle.Dock = DockStyle.Fill;
-            //ekle.BringToFront();
+          
 
+            panelOrta.Controls.Clear();
             PersonelEkle ekle = new PersonelEkle();
-            ekle.ShowDialog();
-        }
-
-        //SqlConnection baglanti = new SqlConnection(@"Data Source=HULUSI\SQLSERVER;Initial Catalog=DemirbasTakip;Integrated Security=True");
-
-        private void Admin_Load(object sender, EventArgs e)
-        {
-            /*
-            string getir = "SELECT * FROM tbl_Personel";
-            SqlDataAdapter da = new SqlDataAdapter(getir,baglanti);
-            DataTable dt = new DataTable();
-            da.Fill(dt);
-            gridPersonel.DataSource = dt;
-            */
-
-            DataTable goruntule=islem.VeriCekDt("SELECT * FROM tbl_Personel");
-            gridPersonel.DataSource = goruntule;
+            panelOrta.Controls.Add(ekle);
+            ekle.Show();
+            ekle.Dock = DockStyle.Fill;
 
         }
 
-        private void listeleToolStripMenuItem1_Click(object sender, EventArgs e)
+        private void btnListele_Click(object sender, EventArgs e)
         {
-            Listele list = new Listele();
-            list.ShowDialog();
+
+            panelOrta.Controls.Clear();
+            Listele ekle = new Listele();
+            panelOrta.Controls.Add(ekle);
+            ekle.Show();
+            ekle.Dock = DockStyle.Fill;
         }
     }
 }

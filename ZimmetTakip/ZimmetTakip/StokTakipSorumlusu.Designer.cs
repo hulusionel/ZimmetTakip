@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.panelUst = new System.Windows.Forms.Panel();
-            this.panelOrta = new System.Windows.Forms.Panel();
-            this.btnUrun = new DevExpress.XtraEditors.SimpleButton();
             this.btnZimmet = new DevExpress.XtraEditors.SimpleButton();
+            this.btnUrun = new DevExpress.XtraEditors.SimpleButton();
+            this.panelOrta = new System.Windows.Forms.Panel();
             this.panelUst.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -45,13 +45,14 @@
             this.panelUst.Size = new System.Drawing.Size(620, 77);
             this.panelUst.TabIndex = 0;
             // 
-            // panelOrta
+            // btnZimmet
             // 
-            this.panelOrta.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelOrta.Location = new System.Drawing.Point(0, 77);
-            this.panelOrta.Name = "panelOrta";
-            this.panelOrta.Size = new System.Drawing.Size(620, 282);
-            this.panelOrta.TabIndex = 1;
+            this.btnZimmet.Location = new System.Drawing.Point(139, 21);
+            this.btnZimmet.Name = "btnZimmet";
+            this.btnZimmet.Size = new System.Drawing.Size(133, 56);
+            this.btnZimmet.TabIndex = 0;
+            this.btnZimmet.Text = "Zimmet Ver";
+            this.btnZimmet.Click += new System.EventHandler(this.btnZimmet_Click);
             // 
             // btnUrun
             // 
@@ -62,14 +63,13 @@
             this.btnUrun.Text = "Ürün Ekle";
             this.btnUrun.Click += new System.EventHandler(this.btnUrun_Click);
             // 
-            // btnZimmet
+            // panelOrta
             // 
-            this.btnZimmet.Location = new System.Drawing.Point(139, 21);
-            this.btnZimmet.Name = "btnZimmet";
-            this.btnZimmet.Size = new System.Drawing.Size(133, 56);
-            this.btnZimmet.TabIndex = 0;
-            this.btnZimmet.Text = "Zimmet Ver";
-            this.btnZimmet.Click += new System.EventHandler(this.btnZimmet_Click);
+            this.panelOrta.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelOrta.Location = new System.Drawing.Point(0, 77);
+            this.panelOrta.Name = "panelOrta";
+            this.panelOrta.Size = new System.Drawing.Size(620, 282);
+            this.panelOrta.TabIndex = 1;
             // 
             // StokTakipSorumlusu
             // 

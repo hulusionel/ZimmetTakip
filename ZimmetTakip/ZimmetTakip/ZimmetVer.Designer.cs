@@ -162,6 +162,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
+            this.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.Controls.Add(this.txtZimmetlenecekUrunAdet);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label5);
@@ -175,7 +176,7 @@
             this.Controls.Add(this.comboPersonel);
             this.Controls.Add(this.label1);
             this.Name = "ZimmetVer";
-            this.Size = new System.Drawing.Size(1052, 494);
+            this.Size = new System.Drawing.Size(1050, 492);
             this.Load += new System.EventHandler(this.ZimmetVer_Load);
             ((System.ComponentModel.ISupportInitialize)(this.gridPersonel)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridUrun)).EndInit();
