@@ -126,6 +126,7 @@
             this.Controls.Add(this.btnPersonelEkle);
             this.Controls.Add(this.txtPersonelSoyad);
             this.Controls.Add(this.txtPersonelAd);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "PersonelEkle";
             this.Text = "PersonelEkle";
             this.Load += new System.EventHandler(this.PersonelEkle_Load);

@@ -61,6 +61,7 @@
             this.comboPersonel.Name = "comboPersonel";
             this.comboPersonel.Size = new System.Drawing.Size(121, 21);
             this.comboPersonel.TabIndex = 1;
+            this.comboPersonel.SelectedIndexChanged += new System.EventHandler(this.comboPersonel_SelectedIndexChanged);
             // 
             // gridPersonel
             // 
@@ -99,6 +100,7 @@
             this.comboUrun.Name = "comboUrun";
             this.comboUrun.Size = new System.Drawing.Size(121, 21);
             this.comboUrun.TabIndex = 1;
+            this.comboUrun.SelectedIndexChanged += new System.EventHandler(this.comboUrun_SelectedIndexChanged);
             // 
             // gridUrun
             // 

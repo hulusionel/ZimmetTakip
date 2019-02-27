@@ -49,36 +49,53 @@ namespace ZimmetTakip
             gridPersonel.DataSource = dt;
             */
 
-            /*DataTable gridpersonel = islem.VeriCekDt("SELECT * FROM tbl_Personel WHERE Personel_Id=('"+Convert.ToInt32(comboPersonel.SelectedValue)+"')");
+            DataTable gridpersonel = islem.VeriCekDt("SELECT * FROM tbl_Personel");
             gridPersonel.DataSource = gridpersonel;
 
-            DataTable gridUrun = islem.VeriCekDt("SELECT * FROM tbl_Stok WHERE Urun_Adet>0 AND Kategori_Id=('"+Convert.ToInt32(comboUrun.SelectedValue)+"')");
+            DataTable gridUrun = islem.VeriCekDt("SELECT * FROM tbl_Stok");
             gridPersonel.DataSource = gridUrun;
-
-           */
         }
 
         private void btnZimmet_Click(object sender, EventArgs e)
         {
             if(secilenPersonelId.ToString() !="" && secilenUrunId.ToString() !="")
             {
-                if(txtZimmetlenecekUrunAdet.Text!="")
-                { 
-                    string zimmetleSQL = ("INSERT INTO tbl_Zimmet(Personel_Id, Departman_Id, Urun_Id, Urun_Adet, Zimmetleme_Tarihi) VALUES ('" + secilenPersonelId + "','" + secilenUrunId + "','" + secilenPersonelDepartmanId + "','" + Convert.ToInt32(txtZimmetlenecekUrunAdet.Text.Trim()) + "','" + Convert.ToDateTime(DateTime.Now) + "') ");
-                    string zimmetStokGuncelle ="";
-                    //TODO: Stoktan adet düşme için güncelleme yapılacak ama adeti kotrol etmek lazım!!!!
+                string stokKontrol = "SELECT Urun_Adet FROM tbl_Stok WHERE Urun_Id=('" + secilenUrunId + "')";
+                DataSet stokKontrolDs = islem.VeriCekDs(stokKontrol);
+                int gelen = Convert.ToInt32(stokKontrolDs.Tables[0].Rows[0]["Urun_Adet"]);
+                int sonuc = (gelen - Convert.ToInt32(txtZimmetlenecekUrunAdet.Text));
 
-                    islem.Guncelle(zimmetStokGuncelle);
-                    islem.Ekle(zimmetleSQL, "Ürün Zİmmetleme İşlemi Başarı İle Yapıldı.");
+                if (txtZimmetlenecekUrunAdet.Text!="")
+                {
+                    if (sonuc > 0)
+                    {
+                        string zimmetleSQL = ("INSERT INTO tbl_Zimmet(Personel_Id, Departman_Id, Urun_Id, Urun_Adet, Zimmetleme_Tarihi) VALUES ('" + secilenPersonelId + "','" + secilenUrunId + "','" + secilenPersonelDepartmanId + "','" + Convert.ToInt32(txtZimmetlenecekUrunAdet.Text.Trim()) + "','" + Convert.ToDateTime(DateTime.Now) + "') ");
+                        string zimmetStokGuncelle = "";
+                        //TODO: Stoktan adet düşme için güncelleme yapılacak ama adeti kotrol etmek lazım!!!!
+
+                        islem.Guncelle(zimmetStokGuncelle);
+                        islem.Ekle(zimmetleSQL, "Ürün Zİmmetleme İşlemi Başarı İle Yapıldı.");
+                    }
+                    else
+                    {
+                        MessageBox.Show("Stok Sayısı Yeterli Değildir!");
+                    }
                 }
                 else if(txtZimmetlenecekUrunAdet.Text=="")
                 {
-                    string zimmetleSQL = ("INSERT INTO tbl_Zimmet(Personel_Id, Departman_Id, Urun_Id, Urun_Adet, Zimmetleme_Tarihi) VALUES ('" + secilenPersonelId + "','" + secilenUrunId + "','" + secilenPersonelDepartmanId + "','" + 1 + "','" + Convert.ToDateTime(DateTime.Now) + "') ");
-                    string zimmetStokGuncelle = "";
-                    //TODO: Stoktan adet düşme için güncelleme yapılacak ama adeti kotrol etmek lazım!!!!
+                    if ((gelen - 1) > 0)
+                    {
+                        string zimmetleSQL = ("INSERT INTO tbl_Zimmet(Personel_Id, Departman_Id, Urun_Id, Urun_Adet, Zimmetleme_Tarihi) VALUES ('" + secilenPersonelId + "','" + secilenUrunId + "','" + secilenPersonelDepartmanId + "','" + 1 + "','" + Convert.ToDateTime(DateTime.Now) + "') ");
+                        string zimmetStokGuncelle = "";
+                        //TODO: Stoktan adet düşme için güncelleme yapılacak ama adeti kotrol etmek lazım!!!!
 
-                    islem.Guncelle(zimmetStokGuncelle);
-                    islem.Ekle(zimmetleSQL, "Ürün Zİmmetleme İşlemi Başarı İle Yapıldı.");
+                        islem.Guncelle(zimmetStokGuncelle);
+                        islem.Ekle(zimmetleSQL, "Ürün Zİmmetleme İşlemi Başarı İle Yapıldı.");
+                    }
+                    else
+                    {
+                        MessageBox.Show("Stok Sayısı Yeterli Değildir!");
+                    }
                 }
             }
             else
@@ -88,6 +105,18 @@ namespace ZimmetTakip
         }
 
         public static int secilenPersonelId, secilenPersonelDepartmanId, secilenUrunId;
+
+        private void comboPersonel_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            DataTable gridpersonel = islem.VeriCekDt("SELECT * FROM tbl_Personel WHERE Personel_Id=('" + Convert.ToInt32(comboPersonel.SelectedValue) + "')");
+            gridPersonel.DataSource = gridpersonel;
+        }
+
+        private void comboUrun_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            DataTable gridUrun = islem.VeriCekDt("SELECT * FROM tbl_Stok WHERE Urun_Adet>0 AND Kategori_Id=('" + Convert.ToInt32(comboUrun.SelectedValue) + "')");
+            gridPersonel.DataSource = gridUrun;
+        }
 
         private void gridPersonel_SelectionChanged(object sender, EventArgs e)
         {
