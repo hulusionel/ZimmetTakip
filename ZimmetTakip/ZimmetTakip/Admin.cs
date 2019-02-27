@@ -17,33 +17,45 @@ namespace ZimmetTakip
     public partial class Admin : DevExpress.XtraEditors.XtraForm
     {
         DataBaseIslemleri islem = new DataBaseIslemleri();
-
         public Admin()
         {
             InitializeComponent();
         }
 
+        private void listeleToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            //panelOrta.Controls.Clear();
+            //PersonelEkle ekle = new PersonelEkle();            
+            //panelOrta.Controls.Add(ekle);
+            //ekle.Show();
+            //ekle.Dock = DockStyle.Fill;
+            //ekle.BringToFront();
+
+            PersonelEkle ekle = new PersonelEkle();
+            ekle.ShowDialog();
+        }
+
+        //SqlConnection baglanti = new SqlConnection(@"Data Source=HULUSI\SQLSERVER;Initial Catalog=DemirbasTakip;Integrated Security=True");
+
         private void Admin_Load(object sender, EventArgs e)
-        {           
-            DataTable goruntule=islem.VeriCekDt("SELECT * FROM v_PersonelListele");
+        {
+            /*
+            string getir = "SELECT * FROM tbl_Personel";
+            SqlDataAdapter da = new SqlDataAdapter(getir,baglanti);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            gridPersonel.DataSource = dt;
+            */
+
+            DataTable goruntule=islem.VeriCekDt("SELECT * FROM tbl_Personel");
             gridPersonel.DataSource = goruntule;
 
         }
-    
-        private void btnEkle_Click(object sender, EventArgs e)
+
+        private void listeleToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            PersonelEkle ekle = new PersonelEkle();
-            ekle.Show();
-            //ekle.Parent = this;
-            //ekle.ShowDialog();
-
-
-           /* panelOrta.Controls.Clear();
-            PersonelEkle ekle = new PersonelEkle();
-            panelOrta.Controls.Add(ekle);
-            ekle.Show();
-            ekle.Dock = DockStyle.Fill;
-            ekle.BringToFront();*/
+            Listele list = new Listele();
+            list.ShowDialog();
         }
     }
 }

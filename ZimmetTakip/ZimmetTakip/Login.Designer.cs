@@ -60,17 +60,18 @@
             this.txtName.Size = new System.Drawing.Size(208, 21);
             this.txtName.TabIndex = 1;
             this.txtName.Tag = "";
-            this.txtName.Text = "Hulusi";
+            this.txtName.Text = "Utku";
             // 
             // txtPassword
             // 
             this.txtPassword.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.txtPassword.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtPassword.Location = new System.Drawing.Point(77, 258);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.PasswordChar = '*';
             this.txtPassword.Size = new System.Drawing.Size(208, 21);
             this.txtPassword.TabIndex = 1;
-            this.txtPassword.Text = "1";
+            this.txtPassword.Text = "1003";
             // 
             // pictureBox1
             // 
@@ -119,9 +120,9 @@
 
         private DevExpress.XtraEditors.SimpleButton btnLogin;
         private System.Windows.Forms.TextBox txtName;
+        private System.Windows.Forms.TextBox txtPassword;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox txtPassword;
     }
 }
 

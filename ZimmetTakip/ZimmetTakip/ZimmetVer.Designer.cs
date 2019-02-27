@@ -66,7 +66,7 @@
             // gridPersonel
             // 
             this.gridPersonel.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.gridPersonel.Location = new System.Drawing.Point(11, 67);
+            this.gridPersonel.Location = new System.Drawing.Point(11, 77);
             this.gridPersonel.Name = "gridPersonel";
             this.gridPersonel.Size = new System.Drawing.Size(500, 326);
             this.gridPersonel.TabIndex = 2;
@@ -76,7 +76,7 @@
             // 
             this.btnZimmet.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnZimmet.Appearance.Options.UseFont = true;
-            this.btnZimmet.Location = new System.Drawing.Point(958, 438);
+            this.btnZimmet.Location = new System.Drawing.Point(958, 439);
             this.btnZimmet.Name = "btnZimmet";
             this.btnZimmet.Size = new System.Drawing.Size(82, 36);
             this.btnZimmet.TabIndex = 3;
@@ -100,12 +100,11 @@
             this.comboUrun.Name = "comboUrun";
             this.comboUrun.Size = new System.Drawing.Size(121, 21);
             this.comboUrun.TabIndex = 1;
-            this.comboUrun.SelectedIndexChanged += new System.EventHandler(this.comboUrun_SelectedIndexChanged);
             // 
             // gridUrun
             // 
             this.gridUrun.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.gridUrun.Location = new System.Drawing.Point(526, 67);
+            this.gridUrun.Location = new System.Drawing.Point(526, 77);
             this.gridUrun.Name = "gridUrun";
             this.gridUrun.Size = new System.Drawing.Size(514, 326);
             this.gridUrun.TabIndex = 2;
@@ -115,7 +114,7 @@
             // 
             this.lblSecilenPersonel.AutoSize = true;
             this.lblSecilenPersonel.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblSecilenPersonel.Location = new System.Drawing.Point(8, 415);
+            this.lblSecilenPersonel.Location = new System.Drawing.Point(8, 416);
             this.lblSecilenPersonel.Name = "lblSecilenPersonel";
             this.lblSecilenPersonel.Size = new System.Drawing.Size(118, 16);
             this.lblSecilenPersonel.TabIndex = 4;
@@ -125,7 +124,7 @@
             // 
             this.lblSecilenUrun.AutoSize = true;
             this.lblSecilenUrun.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblSecilenUrun.Location = new System.Drawing.Point(523, 415);
+            this.lblSecilenUrun.Location = new System.Drawing.Point(523, 416);
             this.lblSecilenUrun.Name = "lblSecilenUrun";
             this.lblSecilenUrun.Size = new System.Drawing.Size(92, 16);
             this.lblSecilenUrun.TabIndex = 4;
@@ -135,7 +134,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label5.Location = new System.Drawing.Point(523, 443);
+            this.label5.Location = new System.Drawing.Point(523, 444);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(183, 16);
             this.label5.TabIndex = 4;
@@ -143,7 +142,7 @@
             // 
             // txtZimmetlenecekUrunAdet
             // 
-            this.txtZimmetlenecekUrunAdet.Location = new System.Drawing.Point(712, 438);
+            this.txtZimmetlenecekUrunAdet.Location = new System.Drawing.Point(712, 439);
             this.txtZimmetlenecekUrunAdet.Name = "txtZimmetlenecekUrunAdet";
             this.txtZimmetlenecekUrunAdet.Size = new System.Drawing.Size(78, 21);
             this.txtZimmetlenecekUrunAdet.TabIndex = 5;
@@ -152,7 +151,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label3.Location = new System.Drawing.Point(523, 461);
+            this.label3.Location = new System.Drawing.Point(523, 462);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(232, 13);
             this.label3.TabIndex = 4;
@@ -162,6 +161,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSize = true;
             this.Controls.Add(this.txtZimmetlenecekUrunAdet);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label5);
