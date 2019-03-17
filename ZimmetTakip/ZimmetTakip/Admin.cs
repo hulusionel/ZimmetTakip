@@ -39,5 +39,14 @@ namespace ZimmetTakip
             ekle.Show();
             ekle.Dock = DockStyle.Fill;
         }
+
+        private void btnPersonelCİkar_Click(object sender, EventArgs e)
+        {
+            panelOrta.Controls.Clear();
+            PersonelCikar cikar = new PersonelCikar();
+            panelOrta.Controls.Add(cikar);
+            cikar.Show();
+            cikar.Dock = DockStyle.Fill;
+        }
     }
 }

@@ -18,43 +18,29 @@ namespace ZimmetTakip
         {
             InitializeComponent();
         }
-        //SqlConnection baglanti = new SqlConnection(@"Data Source=HULUSI\SQLSERVER;Initial Catalog=DemirbasTakip;Integrated Security=True");
 
         private void ZimmetVer_Load(object sender, EventArgs e)
         {
-            //baglanti.Open();
-            /*SqlCommand departman = new SqlCommand("SELECT Departman_Adi FROM tbl_Departman", baglanti);
-            SqlDataReader read = departman.ExecuteReader();
-            while (read.Read())
-            {
-                comboPersonel.Items.Add(read[0]);//Combobox un içine Kategorileri atar
-            }*/
-
+            
             DataTable gridPersonelDoldur = islem.VeriCekDt("SELECT * FROM v_PersonelListele");
             gridPersonel.DataSource = gridPersonelDoldur;
+            gridPersonel.AllowUserToAddRows = false;
 
             DataTable gridUrunDoldur = islem.VeriCekDt("SELECT * FROM tbl_Stok WHERE Urun_Kullanilabilirlik='"+1+"'");
             gridUrun.DataSource = gridUrunDoldur;
+            gridUrun.AllowUserToAddRows = false;
 
+            //Combobox Departmanların doldurulması
             DataSet comboDepartman = islem.VeriCekDs("SELECT * FROM tbl_Departman");
             comboPersonel.ValueMember = "Depertman_Id";
             comboPersonel.DisplayMember = "Departman_Adi";
             comboPersonel.DataSource = comboDepartman.Tables[0];
 
-
+            //Combobox ürünlerin doldurulması
             DataSet comboUrunKategori = islem.VeriCekDs("SELECT * FROM tbl_Kategori");
             comboUrun.ValueMember = "Kategori_Id";
             comboUrun.DisplayMember = "Kategori_Adi";
-            comboUrun.DataSource = comboUrunKategori.Tables[0];
-
-            //baglanti.Close();
-
-
-            /*SqlDataAdapter da = new SqlDataAdapter(getir, baglanti);
-            DataTable dt = new DataTable();
-            da.Fill(dt);
-            gridPersonel.DataSource = dt;
-            */
+            comboUrun.DataSource = comboUrunKategori.Tables[0];           
         }
 
         private void btnZimmet_Click(object sender, EventArgs e)
@@ -69,14 +55,19 @@ namespace ZimmetTakip
                 if (txtZimmetlenecekUrunAdet.Text != "")
                 {
                      sonuc = (gelen - Convert.ToInt32(txtZimmetlenecekUrunAdet.Text));
-                    if (sonuc > 0)
+                    if (sonuc >= 0)
                     {
-                        string zimmetleSQL = ("INSERT INTO tbl_Zimmet(Personel_Id, Departman_Id, Urun_Id, Urun_Adet, Zimmetlenme_Tarihi) VALUES ('" + secilenPersonelId + "','" + secilenUrunId + "','" + secilenPersonelDepartmanId + "','" + Convert.ToInt32(txtZimmetlenecekUrunAdet.Text.Trim()) + "','" + DateTime.Now.ToShortDateString() + "') ");
+                        string zimmetleSQL = ("INSERT INTO tbl_Zimmet(Personel_Id, Departman_Id, Urun_Id, Urun_Adet, Zimmetlenme_Tarihi) VALUES ('" + secilenPersonelId + "','" + secilenPersonelDepartmanId + "','" + secilenUrunId + "','" + Convert.ToInt32(txtZimmetlenecekUrunAdet.Text.Trim()) + "','" + DateTime.Now.ToShortDateString() + "') ");
                         string zimmetStokGuncelle = "UPDATE tbl_Stok SET Urun_Adet='" + sonuc + "'WHERE Urun_Id='"+secilenUrunId+"'";
                         //TODO: Stoktan adet düşme için güncelleme yapılacak ama adeti kotrol etmek lazım!!!!
 
                         islem.Guncelle(zimmetStokGuncelle);
                         islem.Ekle(zimmetleSQL, "Ürün Zİmmetleme İşlemi Başarı İle Yapıldı.");
+
+                        DataTable gridUrunDoldur = islem.VeriCekDt("SELECT * FROM tbl_Stok WHERE Urun_Kullanilabilirlik='" + 1 + "'");
+                        gridUrun.DataSource = gridUrunDoldur;
+                        gridUrun.AllowUserToAddRows = false;
+
                     }
                     else
                     {
@@ -86,14 +77,18 @@ namespace ZimmetTakip
                 else if (txtZimmetlenecekUrunAdet.Text == "")
                 {
                     sonuc = gelen - 1;
-                    if ((gelen - 1) > 0)
+                    if ((gelen - 1) >= 0)
                     {
-                        string zimmetleSQL = ("INSERT INTO tbl_Zimmet(Personel_Id, Departman_Id, Urun_Id, Urun_Adet, Zimmetlenme_Tarihi) VALUES ('" + secilenPersonelId + "','" + secilenUrunId + "','" + secilenPersonelDepartmanId + "','" + 1 + "','" + DateTime.Now.ToShortDateString() + "') ");
+                        string zimmetleSQL = ("INSERT INTO tbl_Zimmet(Personel_Id, Departman_Id, Urun_Id, Urun_Adet, Zimmetlenme_Tarihi) VALUES ('" + secilenPersonelId + "','" + secilenPersonelDepartmanId + "','" + secilenUrunId + "','" + 1 + "','" + DateTime.Now.ToShortDateString() + "') ");
                         string zimmetStokGuncelle = "UPDATE tbl_Stok SET Urun_Adet='" + sonuc + "'WHERE Urun_Id='" + secilenUrunId + "'";
                         //TODO: Stoktan adet düşme için güncelleme yapılacak ama adeti kotrol etmek lazım!!!!
 
                         islem.Guncelle(zimmetStokGuncelle);
                         islem.Ekle(zimmetleSQL, "Ürün Zİmmetleme İşlemi Başarı İle Yapıldı.");
+
+                        DataTable gridUrunDoldur = islem.VeriCekDt("SELECT * FROM tbl_Stok WHERE Urun_Kullanilabilirlik='" + 1 + "'");
+                        gridUrun.DataSource = gridUrunDoldur;
+                        gridUrun.AllowUserToAddRows = false;
                     }
                     else
                     {
@@ -109,9 +104,20 @@ namespace ZimmetTakip
 
         public static string secilenPersonel, secilenUrunId, secilenPersonelId, secilenPersonelDepartmanId;
 
+        private void comboUrun_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string comboGelenDeger = (comboUrun.SelectedIndex + 1).ToString(); //DENEMEK İÇİN
+            DataTable gridUrunDoldur = islem.VeriCekDt("sp_UrunListeleCombo " + comboGelenDeger + "");
+            gridUrun.DataSource = gridUrunDoldur;
+            gridUrun.AllowUserToAddRows = false;
+        }
+
         private void comboPersonel_SelectedIndexChanged(object sender, EventArgs e)
         {
-            string a = comboPersonel.SelectedText.ToString(); //DENEMEK İÇİN
+            string comboGelenDeger = (comboPersonel.SelectedIndex +1).ToString(); //DENEMEK İÇİN
+            DataTable gridPersonelDoldur = islem.VeriCekDt("sp_PersonelListeleCombo " + comboGelenDeger +"");
+            gridPersonel.DataSource = gridPersonelDoldur;
+            gridPersonel.AllowUserToAddRows = false;
         }
 
         private void gridPersonel_SelectionChanged(object sender, EventArgs e)

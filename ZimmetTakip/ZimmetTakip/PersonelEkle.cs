@@ -21,8 +21,10 @@ namespace ZimmetTakip
 
         private void btnPersonelEkle_Click(object sender, EventArgs e)
         {
-            string ekleSQL = "INSERT INTO tbl_Personel(Personel_Ad, Personel_Soyad, Departman_Id, Gorev_Id) VALUES ('" + txtPersonelAd.Text.Trim() + "','" + txtPersonelSoyad.Text.Trim() + "','" + (comboDepartman.SelectedIndex + 1) + "','" + (comboGorev.SelectedIndex + 1) + "') ";
+            string ekleSQL = "INSERT INTO tbl_Personel(Personel_Ad, Personel_Soyad, Departman_Id, Gorev_Id), Calisma_Durumu VALUES ('" + txtPersonelAd.Text.Trim() + "','" + txtPersonelSoyad.Text.Trim() + "','" + comboDepartman.SelectedValue + "','" + comboGorev.SelectedValue + "','"+1+"') ";
             islem.Ekle(ekleSQL, "Personel Sisteme Başarı İle Eklendi.");
+            txtPersonelAd.Text = "";
+            txtPersonelSoyad.Text = "";
         }
 
         private void PersonelEkle_Load(object sender, EventArgs e)

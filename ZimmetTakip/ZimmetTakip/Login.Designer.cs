@@ -60,7 +60,7 @@
             this.txtName.Size = new System.Drawing.Size(208, 21);
             this.txtName.TabIndex = 1;
             this.txtName.Tag = "";
-            this.txtName.Text = "Utku";
+            this.txtName.Text = "Hulusi";
             // 
             // txtPassword
             // 
@@ -71,7 +71,7 @@
             this.txtPassword.PasswordChar = '*';
             this.txtPassword.Size = new System.Drawing.Size(208, 21);
             this.txtPassword.TabIndex = 1;
-            this.txtPassword.Text = "1003";
+            this.txtPassword.Text = "1";
             // 
             // pictureBox1
             // 

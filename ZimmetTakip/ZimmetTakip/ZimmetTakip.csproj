@@ -63,6 +63,12 @@
     <Compile Include="Admin.Designer.cs">
       <DependentUpon>Admin.cs</DependentUpon>
     </Compile>
+    <Compile Include="BolumSefi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BolumSefi.Designer.cs">
+      <DependentUpon>BolumSefi.cs</DependentUpon>
+    </Compile>
     <Compile Include="DataBaseIslemleri.cs" />
     <Compile Include="DemirbasTakipDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -81,11 +87,23 @@
     <Compile Include="Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
     </Compile>
+    <Compile Include="PersonelCikar.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PersonelCikar.Designer.cs">
+      <DependentUpon>PersonelCikar.cs</DependentUpon>
+    </Compile>
     <Compile Include="PersonelEkle.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="PersonelEkle.Designer.cs">
       <DependentUpon>PersonelEkle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PersonelZimmetAyrinti.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PersonelZimmetAyrinti.Designer.cs">
+      <DependentUpon>PersonelZimmetAyrinti.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -110,14 +128,23 @@
     <EmbeddedResource Include="Admin.resx">
       <DependentUpon>Admin.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="BolumSefi.resx">
+      <DependentUpon>BolumSefi.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Listele.resx">
       <DependentUpon>Listele.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="PersonelCikar.resx">
+      <DependentUpon>PersonelCikar.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="PersonelEkle.resx">
       <DependentUpon>PersonelEkle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PersonelZimmetAyrinti.resx">
+      <DependentUpon>PersonelZimmetAyrinti.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">

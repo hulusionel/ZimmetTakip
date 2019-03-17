@@ -218,7 +218,9 @@ C:\Users\hulus\Desktop\sınama ödevi\ZimmetTakip\ZimmetTakip\bin\Debug\de\DevEx
 C:\Users\hulus\Desktop\sınama ödevi\ZimmetTakip\ZimmetTakip\bin\Debug\es\DevExpress.Office.v17.1.Core.resources.dll
 C:\Users\hulus\Desktop\sınama ödevi\ZimmetTakip\ZimmetTakip\bin\Debug\ja\DevExpress.Office.v17.1.Core.resources.dll
 C:\Users\hulus\Desktop\sınama ödevi\ZimmetTakip\ZimmetTakip\bin\Debug\ru\DevExpress.Office.v17.1.Core.resources.dll
+C:\Users\hulus\Desktop\sınama ödevi\ZimmetTakip\ZimmetTakip\obj\Debug\ZimmetTakip.csprojAssemblyReference.cache
 C:\Users\hulus\Desktop\sınama ödevi\ZimmetTakip\ZimmetTakip\obj\Debug\ZimmetTakip.Admin.resources
+C:\Users\hulus\Desktop\sınama ödevi\ZimmetTakip\ZimmetTakip\obj\Debug\ZimmetTakip.BolumSefi.resources
 C:\Users\hulus\Desktop\sınama ödevi\ZimmetTakip\ZimmetTakip\obj\Debug\ZimmetTakip.Listele.resources
 C:\Users\hulus\Desktop\sınama ödevi\ZimmetTakip\ZimmetTakip\obj\Debug\ZimmetTakip.Login.resources
 C:\Users\hulus\Desktop\sınama ödevi\ZimmetTakip\ZimmetTakip\obj\Debug\ZimmetTakip.PersonelEkle.resources
@@ -232,4 +234,5 @@ C:\Users\hulus\Desktop\sınama ödevi\ZimmetTakip\ZimmetTakip\obj\Debug\ZimmetTa
 C:\Users\hulus\Desktop\sınama ödevi\ZimmetTakip\ZimmetTakip\obj\Debug\ZimmetTakip.csproj.CopyComplete
 C:\Users\hulus\Desktop\sınama ödevi\ZimmetTakip\ZimmetTakip\obj\Debug\ZimmetTakip.exe
 C:\Users\hulus\Desktop\sınama ödevi\ZimmetTakip\ZimmetTakip\obj\Debug\ZimmetTakip.pdb
-C:\Users\hulus\Desktop\sınama ödevi\ZimmetTakip\ZimmetTakip\obj\Debug\ZimmetTakip.csprojAssemblyReference.cache
+C:\Users\hulus\Desktop\sınama ödevi\ZimmetTakip\ZimmetTakip\obj\Debug\ZimmetTakip.PersonelCikar.resources
+C:\Users\hulus\Desktop\sınama ödevi\ZimmetTakip\ZimmetTakip\obj\Debug\ZimmetTakip.PersonelZimmetAyrinti.resources

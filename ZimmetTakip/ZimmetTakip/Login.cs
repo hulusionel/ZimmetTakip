@@ -12,34 +12,17 @@ namespace ZimmetTakip
     public partial class Login : DevExpress.XtraEditors.XtraForm
     {
         DataBaseIslemleri islem = new DataBaseIslemleri();
+        public static string gonderilenDepartmanId, gonderilenPersonelId;
         public Login()
         {
             InitializeComponent();
-           // DataBaseIslemleri db = new DataBaseIslemleri();
         }
-
-        //SqlConnection baglanti = new SqlConnection(@"Data Source=HULUSI\SQLSERVER;Initial Catalog=DemirbasTakip;Integrated Security=True");
-        
-
         private void Login_Load(object sender, EventArgs e) { }
         
-
         private void btnLogin_Click(object sender, EventArgs e)
-        {
+        {           
             try
             {
-                /*
-                baglanti.Open();
-                string sql = "SELECT * FROM tbl_Personel WHERE Personel_Ad=@adi AND Personel_Id=@Id";
-                SqlParameter ad = new SqlParameter("adi", txtName.Text);
-                SqlParameter sifre = new SqlParameter("Id", txtPassword.Text);
-                SqlCommand komut = new SqlCommand(sql, baglanti);
-                komut.Parameters.Add(ad);
-                komut.Parameters.Add(sifre);
-                DataTable dt = new DataTable();
-                SqlDataAdapter da = new SqlDataAdapter(komut);
-                da.Fill(dt);
-                */
                 DataTable loginDt = islem.VeriCekDt("SELECT * FROM tbl_Personel WHERE Personel_Ad='" + txtName.Text.Trim() + "' AND Personel_Id='" + txtPassword.Text.Trim() + "'");
                 DataSet loginDs = islem.VeriCekDs("SELECT * FROM tbl_Personel WHERE Personel_Ad='" + txtName.Text.Trim() + "' AND Personel_Id='" + txtPassword.Text.Trim() + "'");
 
@@ -48,6 +31,7 @@ namespace ZimmetTakip
                     switch (loginDs.Tables[0].Rows[0]["Gorev_Id"].ToString())
                     {
                         case "1":
+                            gonderilenPersonelId = loginDs.Tables[0].Rows[0]["Personel_Id"].ToString();
                             Admin admin = new Admin();
                             admin.Show();
                             break;
@@ -57,12 +41,15 @@ namespace ZimmetTakip
                             {
                                 StokTakipSorumlusu stokTakip = new StokTakipSorumlusu();
                                 stokTakip.Show();
+                                
                             }
                             else
                             {
                                 //TODO:Satın alma departmanı değilse gidilecek sayfa
-                                StokTakipSorumlusu stokTakip2 = new StokTakipSorumlusu();
-                                stokTakip2.Show();
+                                gonderilenDepartmanId = loginDs.Tables[0].Rows[0]["Departman_Id"].ToString();
+                                gonderilenPersonelId= loginDs.Tables[0].Rows[0]["Personel_Id"].ToString();
+                                BolumSefi sef = new BolumSefi();
+                                sef.Show();
                             }
                             break;
                         case "3":
