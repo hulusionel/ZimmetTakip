@@ -36,6 +36,9 @@
             // 
             // gridPersonel
             // 
+            this.gridPersonel.BackgroundColor = System.Drawing.SystemColors.ControlLight;
+            this.gridPersonel.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.gridPersonel.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.gridPersonel.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.gridPersonel.Location = new System.Drawing.Point(12, 16);
             this.gridPersonel.MultiSelect = false;
@@ -50,9 +53,10 @@
             // lblPersonel
             // 
             this.lblPersonel.AutoSize = true;
+            this.lblPersonel.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold);
             this.lblPersonel.Location = new System.Drawing.Point(12, 329);
             this.lblPersonel.Name = "lblPersonel";
-            this.lblPersonel.Size = new System.Drawing.Size(88, 13);
+            this.lblPersonel.Size = new System.Drawing.Size(118, 16);
             this.lblPersonel.TabIndex = 1;
             this.lblPersonel.Text = "Seçilen Personel:";
             // 
@@ -67,6 +71,8 @@
             // 
             // PersonelCikar
             // 
+            this.Appearance.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.Appearance.Options.UseBackColor = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.btnPersonelCikar);

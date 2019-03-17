@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(BolumSefi));
             this.btnRaporAl = new DevExpress.XtraEditors.SimpleButton();
             this.gridPersonel = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
@@ -35,6 +36,7 @@
             this.lblPersonel = new System.Windows.Forms.Label();
             this.panelOrta = new System.Windows.Forms.Panel();
             this.panelUst = new System.Windows.Forms.Panel();
+            this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.gridPersonel)).BeginInit();
             this.panelOrta.SuspendLayout();
             this.panelUst.SuspendLayout();
@@ -42,7 +44,7 @@
             // 
             // btnRaporAl
             // 
-            this.btnRaporAl.Location = new System.Drawing.Point(6, 6);
+            this.btnRaporAl.Location = new System.Drawing.Point(6, 7);
             this.btnRaporAl.Name = "btnRaporAl";
             this.btnRaporAl.Size = new System.Drawing.Size(75, 23);
             this.btnRaporAl.TabIndex = 0;
@@ -51,6 +53,9 @@
             // 
             // gridPersonel
             // 
+            this.gridPersonel.BackgroundColor = System.Drawing.SystemColors.ControlLight;
+            this.gridPersonel.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.gridPersonel.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.gridPersonel.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.gridPersonel.Location = new System.Drawing.Point(6, 35);
             this.gridPersonel.MultiSelect = false;
@@ -66,32 +71,36 @@
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold);
             this.label1.Location = new System.Drawing.Point(17, 40);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(64, 13);
+            this.label1.Size = new System.Drawing.Size(85, 16);
             this.label1.TabIndex = 2;
             this.label1.Text = "Departman:";
             // 
             // lblDepartmanAdi
             // 
             this.lblDepartmanAdi.AutoSize = true;
-            this.lblDepartmanAdi.Location = new System.Drawing.Point(88, 40);
+            this.lblDepartmanAdi.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold);
+            this.lblDepartmanAdi.Location = new System.Drawing.Point(100, 40);
             this.lblDepartmanAdi.Name = "lblDepartmanAdi";
-            this.lblDepartmanAdi.Size = new System.Drawing.Size(35, 13);
+            this.lblDepartmanAdi.Size = new System.Drawing.Size(46, 16);
             this.lblDepartmanAdi.TabIndex = 3;
             this.lblDepartmanAdi.Text = "label2";
             // 
             // lblPersonel
             // 
             this.lblPersonel.AutoSize = true;
+            this.lblPersonel.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold);
             this.lblPersonel.Location = new System.Drawing.Point(17, 10);
             this.lblPersonel.Name = "lblPersonel";
-            this.lblPersonel.Size = new System.Drawing.Size(60, 13);
+            this.lblPersonel.Size = new System.Drawing.Size(80, 16);
             this.lblPersonel.TabIndex = 2;
             this.lblPersonel.Text = "Hoşgeldiniz";
             // 
             // panelOrta
             // 
+            this.panelOrta.BackColor = System.Drawing.SystemColors.ControlLight;
             this.panelOrta.Controls.Add(this.gridPersonel);
             this.panelOrta.Controls.Add(this.btnRaporAl);
             this.panelOrta.Location = new System.Drawing.Point(0, 63);
@@ -101,6 +110,8 @@
             // 
             // panelUst
             // 
+            this.panelUst.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.panelUst.Controls.Add(this.simpleButton1);
             this.panelUst.Controls.Add(this.lblPersonel);
             this.panelUst.Controls.Add(this.label1);
             this.panelUst.Controls.Add(this.lblDepartmanAdi);
@@ -110,13 +121,24 @@
             this.panelUst.Size = new System.Drawing.Size(697, 67);
             this.panelUst.TabIndex = 5;
             // 
+            // simpleButton1
+            // 
+            this.simpleButton1.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.UltraFlat;
+            this.simpleButton1.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton1.ImageOptions.Image")));
+            this.simpleButton1.Location = new System.Drawing.Point(656, 3);
+            this.simpleButton1.Name = "simpleButton1";
+            this.simpleButton1.Size = new System.Drawing.Size(38, 35);
+            this.simpleButton1.TabIndex = 4;
+            this.simpleButton1.Click += new System.EventHandler(this.simpleButton1_Click);
+            // 
             // BolumSefi
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(697, 461);
+            this.ClientSize = new System.Drawing.Size(697, 365);
             this.Controls.Add(this.panelUst);
             this.Controls.Add(this.panelOrta);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "BolumSefi";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "BolumSefi";
@@ -138,5 +160,6 @@
         private System.Windows.Forms.Label lblPersonel;
         private System.Windows.Forms.Panel panelOrta;
         private System.Windows.Forms.Panel panelUst;
+        private DevExpress.XtraEditors.SimpleButton simpleButton1;
     }
 }

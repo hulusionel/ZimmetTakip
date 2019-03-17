@@ -28,15 +28,18 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(StokTakipSorumlusu));
             this.panelUst = new System.Windows.Forms.Panel();
             this.btnZimmet = new DevExpress.XtraEditors.SimpleButton();
             this.btnUrun = new DevExpress.XtraEditors.SimpleButton();
             this.panelOrta = new System.Windows.Forms.Panel();
+            this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
             this.panelUst.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelUst
             // 
+            this.panelUst.Controls.Add(this.simpleButton1);
             this.panelUst.Controls.Add(this.btnZimmet);
             this.panelUst.Controls.Add(this.btnUrun);
             this.panelUst.Dock = System.Windows.Forms.DockStyle.Top;
@@ -47,6 +50,8 @@
             // 
             // btnZimmet
             // 
+            this.btnZimmet.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
+            this.btnZimmet.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnZimmet.ImageOptions.Image")));
             this.btnZimmet.Location = new System.Drawing.Point(135, 1);
             this.btnZimmet.Name = "btnZimmet";
             this.btnZimmet.Size = new System.Drawing.Size(133, 58);
@@ -56,6 +61,8 @@
             // 
             // btnUrun
             // 
+            this.btnUrun.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
+            this.btnUrun.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnUrun.ImageOptions.Image")));
             this.btnUrun.Location = new System.Drawing.Point(2, 1);
             this.btnUrun.Name = "btnUrun";
             this.btnUrun.Size = new System.Drawing.Size(133, 58);
@@ -65,11 +72,22 @@
             // 
             // panelOrta
             // 
+            this.panelOrta.BackColor = System.Drawing.SystemColors.ControlLight;
             this.panelOrta.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelOrta.Location = new System.Drawing.Point(0, 59);
             this.panelOrta.Name = "panelOrta";
             this.panelOrta.Size = new System.Drawing.Size(1105, 300);
             this.panelOrta.TabIndex = 1;
+            // 
+            // simpleButton1
+            // 
+            this.simpleButton1.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.UltraFlat;
+            this.simpleButton1.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton1.ImageOptions.Image")));
+            this.simpleButton1.Location = new System.Drawing.Point(1067, 0);
+            this.simpleButton1.Name = "simpleButton1";
+            this.simpleButton1.Size = new System.Drawing.Size(38, 35);
+            this.simpleButton1.TabIndex = 5;
+            this.simpleButton1.Click += new System.EventHandler(this.simpleButton1_Click);
             // 
             // StokTakipSorumlusu
             // 
@@ -78,6 +96,7 @@
             this.ClientSize = new System.Drawing.Size(1105, 359);
             this.Controls.Add(this.panelOrta);
             this.Controls.Add(this.panelUst);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "StokTakipSorumlusu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "StokTakipSorumlusu";
@@ -93,5 +112,6 @@
         private DevExpress.XtraEditors.SimpleButton btnUrun;
         private System.Windows.Forms.Panel panelOrta;
         private DevExpress.XtraEditors.SimpleButton btnZimmet;
+        private DevExpress.XtraEditors.SimpleButton simpleButton1;
     }
 }

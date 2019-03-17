@@ -36,18 +36,21 @@
             // 
             // gridPersonelZimmet
             // 
+            this.gridPersonelZimmet.BackgroundColor = System.Drawing.SystemColors.ControlLight;
+            this.gridPersonelZimmet.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.gridPersonelZimmet.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.gridPersonelZimmet.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.gridPersonelZimmet.Location = new System.Drawing.Point(20, 46);
+            this.gridPersonelZimmet.Location = new System.Drawing.Point(3, 42);
             this.gridPersonelZimmet.MultiSelect = false;
             this.gridPersonelZimmet.Name = "gridPersonelZimmet";
             this.gridPersonelZimmet.ReadOnly = true;
             this.gridPersonelZimmet.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.gridPersonelZimmet.Size = new System.Drawing.Size(490, 250);
+            this.gridPersonelZimmet.Size = new System.Drawing.Size(549, 250);
             this.gridPersonelZimmet.TabIndex = 0;
             // 
             // btnRapor
             // 
-            this.btnRapor.Location = new System.Drawing.Point(20, 3);
+            this.btnRapor.Location = new System.Drawing.Point(21, 13);
             this.btnRapor.Name = "btnRapor";
             this.btnRapor.Size = new System.Drawing.Size(75, 23);
             this.btnRapor.TabIndex = 1;
@@ -55,7 +58,7 @@
             // 
             // btnGeri
             // 
-            this.btnGeri.Location = new System.Drawing.Point(433, 3);
+            this.btnGeri.Location = new System.Drawing.Point(451, 13);
             this.btnGeri.Name = "btnGeri";
             this.btnGeri.Size = new System.Drawing.Size(77, 23);
             this.btnGeri.TabIndex = 2;
@@ -64,13 +67,15 @@
             // 
             // PersonelZimmetAyrinti
             // 
+            this.Appearance.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.Appearance.Options.UseBackColor = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.btnGeri);
             this.Controls.Add(this.btnRapor);
             this.Controls.Add(this.gridPersonelZimmet);
             this.Name = "PersonelZimmetAyrinti";
-            this.Size = new System.Drawing.Size(541, 361);
+            this.Size = new System.Drawing.Size(568, 361);
             this.Load += new System.EventHandler(this.PersonelZimmetAyrinti_Load);
             ((System.ComponentModel.ISupportInitialize)(this.gridPersonelZimmet)).EndInit();
             this.ResumeLayout(false);

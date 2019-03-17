@@ -34,11 +34,13 @@
             this.btnListele = new DevExpress.XtraEditors.SimpleButton();
             this.btnEkle = new DevExpress.XtraEditors.SimpleButton();
             this.panelOrta = new System.Windows.Forms.Panel();
+            this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
             this.panelUst.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelUst
             // 
+            this.panelUst.Controls.Add(this.simpleButton1);
             this.panelUst.Controls.Add(this.btnPersonelCİkar);
             this.panelUst.Controls.Add(this.btnListele);
             this.panelUst.Controls.Add(this.btnEkle);
@@ -50,6 +52,7 @@
             // 
             // btnPersonelCİkar
             // 
+            this.btnPersonelCİkar.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
             this.btnPersonelCİkar.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnPersonelCİkar.ImageOptions.Image")));
             this.btnPersonelCİkar.Location = new System.Drawing.Point(256, 1);
             this.btnPersonelCİkar.Name = "btnPersonelCİkar";
@@ -60,6 +63,7 @@
             // 
             // btnListele
             // 
+            this.btnListele.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
             this.btnListele.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnListele.ImageOptions.Image")));
             this.btnListele.Location = new System.Drawing.Point(124, 1);
             this.btnListele.Name = "btnListele";
@@ -70,6 +74,7 @@
             // 
             // btnEkle
             // 
+            this.btnEkle.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
             this.btnEkle.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnEkle.ImageOptions.Image")));
             this.btnEkle.Location = new System.Drawing.Point(1, 1);
             this.btnEkle.Name = "btnEkle";
@@ -80,11 +85,22 @@
             // 
             // panelOrta
             // 
+            this.panelOrta.BackColor = System.Drawing.SystemColors.ControlLight;
             this.panelOrta.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelOrta.Location = new System.Drawing.Point(0, 55);
             this.panelOrta.Name = "panelOrta";
             this.panelOrta.Size = new System.Drawing.Size(795, 366);
             this.panelOrta.TabIndex = 0;
+            // 
+            // simpleButton1
+            // 
+            this.simpleButton1.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.UltraFlat;
+            this.simpleButton1.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton1.ImageOptions.Image")));
+            this.simpleButton1.Location = new System.Drawing.Point(756, 3);
+            this.simpleButton1.Name = "simpleButton1";
+            this.simpleButton1.Size = new System.Drawing.Size(38, 35);
+            this.simpleButton1.TabIndex = 2;
+            this.simpleButton1.Click += new System.EventHandler(this.simpleButton1_Click);
             // 
             // Admin
             // 
@@ -110,5 +126,6 @@
         private DevExpress.XtraEditors.SimpleButton btnEkle;
         private System.Windows.Forms.Panel panelOrta;
         private DevExpress.XtraEditors.SimpleButton btnPersonelCİkar;
+        private DevExpress.XtraEditors.SimpleButton simpleButton1;
     }
 }

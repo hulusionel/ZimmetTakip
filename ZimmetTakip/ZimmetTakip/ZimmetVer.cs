@@ -40,7 +40,21 @@ namespace ZimmetTakip
             DataSet comboUrunKategori = islem.VeriCekDs("SELECT * FROM tbl_Kategori");
             comboUrun.ValueMember = "Kategori_Id";
             comboUrun.DisplayMember = "Kategori_Adi";
-            comboUrun.DataSource = comboUrunKategori.Tables[0];           
+            comboUrun.DataSource = comboUrunKategori.Tables[0];
+
+            gridPersonel.Columns[0].HeaderText = "Personel ID";
+            gridPersonel.Columns[1].HeaderText = "Personel Adı";
+            gridPersonel.Columns[2].HeaderText = "Personel Soyadı";
+            gridPersonel.Columns[3].HeaderText = "Departman Adı";
+            gridPersonel.Columns[4].HeaderText = "Görev Tanımı";
+
+            gridUrun.Columns[0].HeaderText = "Ürün ID";
+            gridUrun.Columns[1].HeaderText = "Ürün Markası";
+            gridUrun.Columns[2].HeaderText = "Ürün Modeli";
+            gridUrun.Columns[3].HeaderText = "Ürün Adeti";
+            
+
+
         }
 
         private void btnZimmet_Click(object sender, EventArgs e)
@@ -135,6 +149,18 @@ namespace ZimmetTakip
                 DataSet secilenUr = islem.VeriCekDs("SELECT * FROM tbl_Stok WHERE Urun_Kullanilabilirlik ='" + 1 + "' AND Urun_Id='" + al + "'");
                 secilenUrunId = secilenUr.Tables[0].Rows[0]["Urun_Id"].ToString();
             }
+        }
+
+        private void txtZimmetlenecekUrunAdet_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsDigit(e.KeyChar) && e.KeyChar != 8)
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void simpleButton1_Click(object sender, EventArgs e)
+        {
         }
 
         private void comboPersonel_SelectedIndexChanged(object sender, EventArgs e)

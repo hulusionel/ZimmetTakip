@@ -28,6 +28,12 @@ namespace ZimmetTakip
             gridPersonelZimmet.DataSource = Personel;
             gridPersonelZimmet.AllowUserToAddRows = false;
 
+            gridPersonelZimmet.Columns[0].HeaderText = "Personel ID";
+            gridPersonelZimmet.Columns[1].HeaderText = "Personel Adı";
+            gridPersonelZimmet.Columns[2].HeaderText = "Personel Soyadı";
+            gridPersonelZimmet.Columns[3].HeaderText = "Departman Adı";
+            gridPersonelZimmet.Columns[4].HeaderText = "Görev Tanımı";
+
         }
 
         private void btnGeri_Click(object sender, EventArgs e)

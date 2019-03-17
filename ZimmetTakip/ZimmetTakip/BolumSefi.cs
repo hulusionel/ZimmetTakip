@@ -34,6 +34,12 @@ namespace ZimmetTakip
             gridPersonel.AllowUserToAddRows = false;
 
             lblDepartmanAdi.Text = Personel.Rows[0][3].ToString();
+
+            gridPersonel.Columns[0].HeaderText = "Personel ID";
+            gridPersonel.Columns[1].HeaderText = "Personel Adı";
+            gridPersonel.Columns[2].HeaderText = "Personel Soyadı";
+            gridPersonel.Columns[3].HeaderText = "Departman Adı";
+            gridPersonel.Columns[4].HeaderText = "Görev Tanımı";
         }
 
         private void gridPersonel_SelectionChanged(object sender, EventArgs e)
@@ -47,6 +53,11 @@ namespace ZimmetTakip
             { 
                 secilenPersonelId = gridPersonel.Rows[e.RowIndex].Cells[0].Value.ToString();
             }
+        }
+
+        private void simpleButton1_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
 
         private void gridPersonel_CellMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)

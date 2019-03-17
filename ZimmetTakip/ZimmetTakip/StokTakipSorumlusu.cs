@@ -47,5 +47,10 @@ namespace ZimmetTakip
             zimmet.Dock = DockStyle.Fill;
             zimmet.BringToFront();
         }
+
+        private void simpleButton1_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

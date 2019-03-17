@@ -41,12 +41,14 @@
             // 
             // gridPersonel
             // 
+            this.gridPersonel.BackgroundColor = System.Drawing.SystemColors.ControlLight;
+            this.gridPersonel.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.gridPersonel.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.gridPersonel.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.gridPersonel.Location = new System.Drawing.Point(15, 14);
             this.gridPersonel.MultiSelect = false;
             this.gridPersonel.Name = "gridPersonel";
             this.gridPersonel.ReadOnly = true;
-            this.gridPersonel.RowHeadersVisible = false;
             this.gridPersonel.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.gridPersonel.Size = new System.Drawing.Size(558, 314);
             this.gridPersonel.TabIndex = 0;
@@ -118,6 +120,8 @@
             // 
             // Listele
             // 
+            this.Appearance.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.Appearance.Options.UseBackColor = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.lblHata2);

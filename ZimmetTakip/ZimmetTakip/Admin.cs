@@ -55,5 +55,10 @@ namespace ZimmetTakip
             ekle.Show();
             ekle.Dock = DockStyle.Fill;
         }
+
+        private void simpleButton1_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

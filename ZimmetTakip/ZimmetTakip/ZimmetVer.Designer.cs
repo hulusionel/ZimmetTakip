@@ -66,6 +66,9 @@
             // 
             // gridPersonel
             // 
+            this.gridPersonel.BackgroundColor = System.Drawing.SystemColors.ControlLight;
+            this.gridPersonel.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.gridPersonel.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.gridPersonel.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.gridPersonel.Location = new System.Drawing.Point(11, 47);
             this.gridPersonel.MultiSelect = false;
@@ -110,6 +113,9 @@
             // 
             // gridUrun
             // 
+            this.gridUrun.BackgroundColor = System.Drawing.SystemColors.ControlLight;
+            this.gridUrun.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.gridUrun.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.gridUrun.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.gridUrun.Location = new System.Drawing.Point(609, 47);
             this.gridUrun.MultiSelect = false;
@@ -158,6 +164,7 @@
             this.txtZimmetlenecekUrunAdet.Name = "txtZimmetlenecekUrunAdet";
             this.txtZimmetlenecekUrunAdet.Size = new System.Drawing.Size(78, 21);
             this.txtZimmetlenecekUrunAdet.TabIndex = 5;
+            this.txtZimmetlenecekUrunAdet.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtZimmetlenecekUrunAdet_KeyPress);
             // 
             // label3
             // 
@@ -171,6 +178,8 @@
             // 
             // ZimmetVer
             // 
+            this.Appearance.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.Appearance.Options.UseBackColor = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
@@ -188,7 +197,7 @@
             this.Controls.Add(this.comboPersonel);
             this.Controls.Add(this.label1);
             this.Name = "ZimmetVer";
-            this.Size = new System.Drawing.Size(1128, 348);
+            this.Size = new System.Drawing.Size(1132, 348);
             this.Load += new System.EventHandler(this.ZimmetVer_Load);
             ((System.ComponentModel.ISupportInitialize)(this.gridPersonel)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridUrun)).EndInit();

@@ -99,7 +99,7 @@
             this.btnPersonelEkle.Location = new System.Drawing.Point(117, 210);
             this.btnPersonelEkle.Name = "btnPersonelEkle";
             this.btnPersonelEkle.Size = new System.Drawing.Size(121, 23);
-            this.btnPersonelEkle.TabIndex = 17;
+            this.btnPersonelEkle.TabIndex = 3;
             this.btnPersonelEkle.Text = "Personeli Sisteme Ekle";
             this.btnPersonelEkle.Click += new System.EventHandler(this.btnPersonelEkle_Click);
             // 
@@ -109,7 +109,7 @@
             this.txtPersonelSoyad.Name = "txtPersonelSoyad";
             this.txtPersonelSoyad.Properties.MaxLength = 10;
             this.txtPersonelSoyad.Size = new System.Drawing.Size(120, 20);
-            this.txtPersonelSoyad.TabIndex = 15;
+            this.txtPersonelSoyad.TabIndex = 2;
             this.txtPersonelSoyad.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPersonelSoyad_KeyPress);
             // 
             // txtPersonelAd
@@ -118,7 +118,7 @@
             this.txtPersonelAd.Name = "txtPersonelAd";
             this.txtPersonelAd.Properties.MaxLength = 15;
             this.txtPersonelAd.Size = new System.Drawing.Size(120, 20);
-            this.txtPersonelAd.TabIndex = 16;
+            this.txtPersonelAd.TabIndex = 1;
             this.txtPersonelAd.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPersonelAd_KeyPress);
             // 
             // lblHata
@@ -141,6 +141,8 @@
             // 
             // PersonelEkle
             // 
+            this.Appearance.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.Appearance.Options.UseBackColor = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.lblHata2);

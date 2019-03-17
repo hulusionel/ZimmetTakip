@@ -39,6 +39,10 @@
             this.label5 = new System.Windows.Forms.Label();
             this.txtAdet = new System.Windows.Forms.TextBox();
             this.btnUrunEkle = new DevExpress.XtraEditors.SimpleButton();
+            this.lblHata = new System.Windows.Forms.Label();
+            this.lblHata2 = new System.Windows.Forms.Label();
+            this.lblHata3 = new System.Windows.Forms.Label();
+            this.lblHata4 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -92,7 +96,7 @@
             this.txtModel.MaxLength = 10;
             this.txtModel.Name = "txtModel";
             this.txtModel.Size = new System.Drawing.Size(121, 21);
-            this.txtModel.TabIndex = 1;
+            this.txtModel.TabIndex = 2;
             this.txtModel.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtModel_KeyPress);
             // 
             // label4
@@ -110,7 +114,7 @@
             this.txtFiyat.MaxLength = 5;
             this.txtFiyat.Name = "txtFiyat";
             this.txtFiyat.Size = new System.Drawing.Size(121, 21);
-            this.txtFiyat.TabIndex = 1;
+            this.txtFiyat.TabIndex = 3;
             this.txtFiyat.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtFiyat_KeyPress);
             // 
             // label5
@@ -128,21 +132,63 @@
             this.txtAdet.MaxLength = 3;
             this.txtAdet.Name = "txtAdet";
             this.txtAdet.Size = new System.Drawing.Size(121, 21);
-            this.txtAdet.TabIndex = 1;
+            this.txtAdet.TabIndex = 4;
             // 
             // btnUrunEkle
             // 
-            this.btnUrunEkle.Location = new System.Drawing.Point(113, 243);
+            this.btnUrunEkle.Location = new System.Drawing.Point(127, 238);
             this.btnUrunEkle.Name = "btnUrunEkle";
-            this.btnUrunEkle.Size = new System.Drawing.Size(75, 23);
+            this.btnUrunEkle.Size = new System.Drawing.Size(89, 27);
             this.btnUrunEkle.TabIndex = 3;
             this.btnUrunEkle.Text = "Ekle";
             this.btnUrunEkle.Click += new System.EventHandler(this.btnUrunEkle_Click);
             // 
+            // lblHata
+            // 
+            this.lblHata.AutoSize = true;
+            this.lblHata.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.lblHata.Location = new System.Drawing.Point(241, 112);
+            this.lblHata.Name = "lblHata";
+            this.lblHata.Size = new System.Drawing.Size(0, 13);
+            this.lblHata.TabIndex = 4;
+            // 
+            // lblHata2
+            // 
+            this.lblHata2.AutoSize = true;
+            this.lblHata2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.lblHata2.Location = new System.Drawing.Point(241, 139);
+            this.lblHata2.Name = "lblHata2";
+            this.lblHata2.Size = new System.Drawing.Size(0, 13);
+            this.lblHata2.TabIndex = 4;
+            // 
+            // lblHata3
+            // 
+            this.lblHata3.AutoSize = true;
+            this.lblHata3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.lblHata3.Location = new System.Drawing.Point(240, 168);
+            this.lblHata3.Name = "lblHata3";
+            this.lblHata3.Size = new System.Drawing.Size(0, 13);
+            this.lblHata3.TabIndex = 4;
+            // 
+            // lblHata4
+            // 
+            this.lblHata4.AutoSize = true;
+            this.lblHata4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.lblHata4.Location = new System.Drawing.Point(240, 196);
+            this.lblHata4.Name = "lblHata4";
+            this.lblHata4.Size = new System.Drawing.Size(0, 13);
+            this.lblHata4.TabIndex = 4;
+            // 
             // UrunEkle
             // 
+            this.Appearance.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.Appearance.Options.UseBackColor = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.lblHata4);
+            this.Controls.Add(this.lblHata3);
+            this.Controls.Add(this.lblHata2);
+            this.Controls.Add(this.lblHata);
             this.Controls.Add(this.btnUrunEkle);
             this.Controls.Add(this.comboKategori);
             this.Controls.Add(this.txtAdet);
@@ -175,5 +221,9 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox txtAdet;
         private DevExpress.XtraEditors.SimpleButton btnUrunEkle;
+        private System.Windows.Forms.Label lblHata;
+        private System.Windows.Forms.Label lblHata2;
+        private System.Windows.Forms.Label lblHata3;
+        private System.Windows.Forms.Label lblHata4;
     }
 }

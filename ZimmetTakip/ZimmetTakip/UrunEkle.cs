@@ -28,13 +28,24 @@ namespace ZimmetTakip
         }
 
         private void btnUrunEkle_Click(object sender, EventArgs e)
-        {           
-            string ekleSQL = "INSERT INTO tbl_Stok(Kategori_Id, Urun_Marka, Urun_Model, Urun_Fiyat, Urun_Adet, Urun_Kullanilabilirlik) VALUES ('" + comboKategori.SelectedValue + "','" + txtMarka.Text.Trim() + "','" + txtModel.Text.Trim() + "','" + txtFiyat.Text.Trim() + "','" + txtAdet.Text.Trim() + "','"+1+"') ";
-            islem.Ekle(ekleSQL, "Ürün Başarı İle Eklendi");
-            txtMarka.Text = "";
-            txtModel.Text = "";
-            txtFiyat.Text = "";
-            txtAdet.Text = "";
+        {
+            if (txtMarka.Text != "" && txtModel.Text != ""&& txtFiyat.Text != "" && txtAdet.Text != "" )
+            {
+                string ekleSQL = "INSERT INTO tbl_Stok(Kategori_Id, Urun_Marka, Urun_Model, Urun_Fiyat, Urun_Adet, Urun_Kullanilabilirlik) VALUES ('" + comboKategori.SelectedValue + "','" + txtMarka.Text.Trim() + "','" + txtModel.Text.Trim() + "','" + txtFiyat.Text.Trim() + "','" + txtAdet.Text.Trim() + "','" + 1 + "') ";
+                islem.Ekle(ekleSQL, "Ürün Başarı İle Eklendi");
+                txtMarka.Text = "";
+                txtModel.Text = "";
+                txtFiyat.Text = "";
+                txtAdet.Text = "";
+            }
+            else
+            {
+
+                lblHata.Text = "*";
+                lblHata2.Text = "*";
+                lblHata3.Text = "*";
+                lblHata4.Text = "*";
+            }
         }
 
         private void txtMarka_KeyPress(object sender, KeyPressEventArgs e)

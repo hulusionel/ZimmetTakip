@@ -21,6 +21,7 @@ namespace ZimmetTakip
 
         private void Listele_Load(object sender, EventArgs e)
         {
+            
             DataTable goruntule = islem.VeriCekDt("SELECT * FROM v_PersonelListele");
             gridPersonel.DataSource = goruntule;
             gridPersonel.AllowUserToAddRows = false;
@@ -34,7 +35,12 @@ namespace ZimmetTakip
             comboPersonelGorev.ValueMember = "Gorev_Id";
             comboPersonelGorev.DisplayMember = "Gorev_Tanimi";
             comboPersonelGorev.DataSource = gorevDoldur.Tables[0];
-            //gridPersonel.Rows[0].Cells[0].Selected = false;
+
+            gridPersonel.Columns[0].HeaderText = "Personel ID";
+            gridPersonel.Columns[1].HeaderText = "Personel Adı";
+            gridPersonel.Columns[2].HeaderText = "Personel Soyadı";
+            gridPersonel.Columns[3].HeaderText = "Departman Adı";
+            gridPersonel.Columns[4].HeaderText = "Görev Tanımı";
 
         }
         public static string secilenId;

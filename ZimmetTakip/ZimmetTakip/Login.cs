@@ -20,13 +20,19 @@ namespace ZimmetTakip
         private void Login_Load(object sender, EventArgs e) { }
         
         private void btnLogin_Click(object sender, EventArgs e)
-        {           
+        {
+            Giris(txtName.Text, txtPassword.Text);
+        }
+
+        public int Giris(string kullaniciAdi,string kullanıcıId)
+        {
+            int deger = 0;
             try
             {
-                DataTable loginDt = islem.VeriCekDt("SELECT * FROM tbl_Personel WHERE Personel_Ad='" + txtName.Text.Trim() + "' AND Personel_Id='" + txtPassword.Text.Trim() + "'");
-                DataSet loginDs = islem.VeriCekDs("SELECT * FROM tbl_Personel WHERE Personel_Ad='" + txtName.Text.Trim() + "' AND Personel_Id='" + txtPassword.Text.Trim() + "'");
+                DataTable loginDt = islem.VeriCekDt("SELECT * FROM tbl_Personel WHERE Personel_Ad='" + kullaniciAdi.Trim() + "' AND Personel_Id='" + kullanıcıId.Trim() + "'");
+                DataSet loginDs = islem.VeriCekDs("SELECT * FROM tbl_Personel WHERE Personel_Ad='" + kullaniciAdi.Trim() + "' AND Personel_Id='" + kullanıcıId.Trim() + "'");
 
-                if (loginDt.Rows.Count>0)
+                if (loginDt.Rows.Count > 0)
                 {
                     switch (loginDs.Tables[0].Rows[0]["Gorev_Id"].ToString())
                     {
@@ -34,6 +40,7 @@ namespace ZimmetTakip
                             gonderilenPersonelId = loginDs.Tables[0].Rows[0]["Personel_Id"].ToString();
                             Admin admin = new Admin();
                             admin.Show();
+                            deger = 1;
                             break;
                         case "2":
                             //TODO:Satın alma departmanı ise gidilecek sayfa
@@ -46,22 +53,24 @@ namespace ZimmetTakip
                             {
                                 //TODO:Satın alma departmanı değilse gidilecek sayfa
                                 gonderilenDepartmanId = loginDs.Tables[0].Rows[0]["Departman_Id"].ToString();
-                                gonderilenPersonelId= loginDs.Tables[0].Rows[0]["Personel_Id"].ToString();
+                                gonderilenPersonelId = loginDs.Tables[0].Rows[0]["Personel_Id"].ToString();
                                 BolumSefi sef = new BolumSefi();
                                 sef.Show();
                             }
                             break;
-                                          
-                    }                
+
+                    }
                 }
                 else
                 {
-                    lblHatalıGiris.Text = "Kullanıcı adı veya şifre hatalı!!!";                  
+                    lblHatalıGiris.Text = "Kullanıcı adı veya şifre hatalı!!!";
                 }
 
             }
             catch { }
 
+
+            return deger;
         }
 
         private void txtName_KeyPress(object sender, KeyPressEventArgs e)

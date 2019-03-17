@@ -27,6 +27,12 @@ namespace ZimmetTakip
             DataTable goruntule = islem.VeriCekDt("sp_PersonelCikarListele "+gelenId+"");//prosedür ile kendisi dışındaki personellerin listelenmesi sağlandı
             gridPersonel.DataSource = goruntule;//kendi dışındakiler grid ekranına eklendi
             gridPersonel.AllowUserToAddRows = false;//gridin en alttaki boş satırı kapatıldı
+
+            gridPersonel.Columns[0].HeaderText = "Personel ID";
+            gridPersonel.Columns[1].HeaderText = "Personel Adı";
+            gridPersonel.Columns[2].HeaderText = "Personel Soyadı";
+            gridPersonel.Columns[3].HeaderText = "Departman Adı";
+            gridPersonel.Columns[4].HeaderText = "Görev Tanımı";
         }
 
         private void gridPersonel_SelectionChanged(object sender, EventArgs e)
