@@ -53,7 +53,10 @@
             // 
             this.gridPersonel.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.gridPersonel.Location = new System.Drawing.Point(6, 35);
+            this.gridPersonel.MultiSelect = false;
             this.gridPersonel.Name = "gridPersonel";
+            this.gridPersonel.ReadOnly = true;
+            this.gridPersonel.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.gridPersonel.Size = new System.Drawing.Size(546, 228);
             this.gridPersonel.TabIndex = 1;
             this.gridPersonel.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.gridPersonel_CellMouseDoubleClick);

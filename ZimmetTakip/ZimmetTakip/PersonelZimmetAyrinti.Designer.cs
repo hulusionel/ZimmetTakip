@@ -38,7 +38,10 @@
             // 
             this.gridPersonelZimmet.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.gridPersonelZimmet.Location = new System.Drawing.Point(20, 46);
+            this.gridPersonelZimmet.MultiSelect = false;
             this.gridPersonelZimmet.Name = "gridPersonelZimmet";
+            this.gridPersonelZimmet.ReadOnly = true;
+            this.gridPersonelZimmet.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.gridPersonelZimmet.Size = new System.Drawing.Size(490, 250);
             this.gridPersonelZimmet.TabIndex = 0;
             // 

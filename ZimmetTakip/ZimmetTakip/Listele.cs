@@ -40,9 +40,9 @@ namespace ZimmetTakip
 
         private void gridPersonel_SelectionChanged(object sender, EventArgs e)
         {
-            txtPersonelAd.Text = gridPersonel.CurrentRow.Cells[1].Value.ToString();
-            txtPersonelSoyad.Text = gridPersonel.CurrentRow.Cells[2].Value.ToString();
-            secilenId = gridPersonel.CurrentRow.Cells[0].Value.ToString();
+            //txtPersonelAd.Text = gridPersonel.CurrentRow.Cells[1].Value.ToString();
+            //txtPersonelSoyad.Text = gridPersonel.CurrentRow.Cells[2].Value.ToString();
+            //secilenId = gridPersonel.CurrentRow.Cells[0].Value.ToString();
         }
 
         private void simpleButton1_Click(object sender, EventArgs e)
@@ -53,6 +53,16 @@ namespace ZimmetTakip
             DataTable goruntule = islem.VeriCekDt("SELECT * FROM v_PersonelListele");
             gridPersonel.DataSource = goruntule;
             gridPersonel.AllowUserToAddRows = false;
+        }
+
+        private void gridPersonel_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if(e.RowIndex>-1)
+            {
+                txtPersonelAd.Text = gridPersonel.Rows[e.RowIndex].Cells[0].Value.ToString();
+                txtPersonelSoyad.Text = gridPersonel.Rows[e.RowIndex].Cells[1].Value.ToString();
+                secilenId = gridPersonel.Rows[e.RowIndex].Cells[0].Value.ToString();
+            }
         }
     }
 }

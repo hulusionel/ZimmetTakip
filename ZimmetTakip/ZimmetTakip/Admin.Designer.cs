@@ -45,7 +45,7 @@
             this.panelUst.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelUst.Location = new System.Drawing.Point(0, 0);
             this.panelUst.Name = "panelUst";
-            this.panelUst.Size = new System.Drawing.Size(745, 55);
+            this.panelUst.Size = new System.Drawing.Size(795, 55);
             this.panelUst.TabIndex = 0;
             // 
             // btnPersonelCİkar
@@ -83,16 +83,17 @@
             this.panelOrta.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelOrta.Location = new System.Drawing.Point(0, 55);
             this.panelOrta.Name = "panelOrta";
-            this.panelOrta.Size = new System.Drawing.Size(745, 366);
+            this.panelOrta.Size = new System.Drawing.Size(795, 366);
             this.panelOrta.TabIndex = 0;
             // 
             // Admin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(745, 421);
+            this.ClientSize = new System.Drawing.Size(795, 421);
             this.Controls.Add(this.panelOrta);
             this.Controls.Add(this.panelUst);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Admin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Admin";

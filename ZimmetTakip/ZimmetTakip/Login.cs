@@ -52,11 +52,14 @@ namespace ZimmetTakip
                                 sef.Show();
                             }
                             break;
-                        case "3":
-                            //çalışan
-                            break;                   
+                                          
                     }                
                 }
+                else
+                {
+                    lblHatalıGiris.Text = "Kullanıcı adı veya şifre hatalı!!!";                  
+                }
+
             }
             catch { }
 

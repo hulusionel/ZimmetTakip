@@ -35,8 +35,9 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.lblHatalıGiris = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -63,7 +64,7 @@
             this.txtName.AccessibleName = "";
             this.txtName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.txtName.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtName.Location = new System.Drawing.Point(66, 201);
+            this.txtName.Location = new System.Drawing.Point(66, 198);
             this.txtName.Name = "txtName";
             this.txtName.Size = new System.Drawing.Size(165, 14);
             this.txtName.TabIndex = 1;
@@ -74,7 +75,7 @@
             // 
             this.txtPassword.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.txtPassword.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtPassword.Location = new System.Drawing.Point(66, 231);
+            this.txtPassword.Location = new System.Drawing.Point(66, 232);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.PasswordChar = '*';
             this.txtPassword.Size = new System.Drawing.Size(165, 14);
@@ -108,6 +109,7 @@
             // 
             this.panel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel1.BackgroundImage")));
             this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.panel1.Controls.Add(this.lblHatalıGiris);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.pictureBox1);
@@ -119,6 +121,16 @@
             this.panel1.Size = new System.Drawing.Size(291, 389);
             this.panel1.TabIndex = 4;
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.ForeColor = System.Drawing.Color.Blue;
+            this.label3.Location = new System.Drawing.Point(47, 241);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(199, 13);
+            this.label3.TabIndex = 5;
+            this.label3.Text = "------------------------------------------------";
+            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -129,15 +141,14 @@
             this.label2.TabIndex = 5;
             this.label2.Text = "------------------------------------------------";
             // 
-            // label3
+            // lblHatalıGiris
             // 
-            this.label3.AutoSize = true;
-            this.label3.ForeColor = System.Drawing.Color.Blue;
-            this.label3.Location = new System.Drawing.Point(47, 241);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(199, 13);
-            this.label3.TabIndex = 5;
-            this.label3.Text = "------------------------------------------------";
+            this.lblHatalıGiris.AutoSize = true;
+            this.lblHatalıGiris.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.lblHatalıGiris.Location = new System.Drawing.Point(75, 265);
+            this.lblHatalıGiris.Name = "lblHatalıGiris";
+            this.lblHatalıGiris.Size = new System.Drawing.Size(0, 13);
+            this.lblHatalıGiris.TabIndex = 6;
             // 
             // Login
             // 
@@ -171,6 +182,7 @@
         private DevExpress.XtraEditors.SimpleButton btnLogin;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lblHatalıGiris;
     }
 }
 

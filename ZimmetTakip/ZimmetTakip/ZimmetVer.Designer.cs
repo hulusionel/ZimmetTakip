@@ -67,7 +67,10 @@
             // 
             this.gridPersonel.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.gridPersonel.Location = new System.Drawing.Point(11, 47);
+            this.gridPersonel.MultiSelect = false;
             this.gridPersonel.Name = "gridPersonel";
+            this.gridPersonel.ReadOnly = true;
+            this.gridPersonel.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.gridPersonel.Size = new System.Drawing.Size(560, 156);
             this.gridPersonel.TabIndex = 2;
             this.gridPersonel.SelectionChanged += new System.EventHandler(this.gridPersonel_SelectionChanged);
@@ -106,7 +109,10 @@
             // 
             this.gridUrun.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.gridUrun.Location = new System.Drawing.Point(609, 47);
+            this.gridUrun.MultiSelect = false;
             this.gridUrun.Name = "gridUrun";
+            this.gridUrun.ReadOnly = true;
+            this.gridUrun.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.gridUrun.Size = new System.Drawing.Size(466, 131);
             this.gridUrun.TabIndex = 2;
             this.gridUrun.SelectionChanged += new System.EventHandler(this.gridUrun_SelectionChanged);
