@@ -90,9 +90,9 @@
             // 
             this.panelOrta.Controls.Add(this.gridPersonel);
             this.panelOrta.Controls.Add(this.btnRaporAl);
-            this.panelOrta.Location = new System.Drawing.Point(6, 72);
+            this.panelOrta.Location = new System.Drawing.Point(0, 63);
             this.panelOrta.Name = "panelOrta";
-            this.panelOrta.Size = new System.Drawing.Size(691, 386);
+            this.panelOrta.Size = new System.Drawing.Size(697, 393);
             this.panelOrta.TabIndex = 4;
             // 
             // panelUst
@@ -114,6 +114,7 @@
             this.Controls.Add(this.panelUst);
             this.Controls.Add(this.panelOrta);
             this.Name = "BolumSefi";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "BolumSefi";
             this.Load += new System.EventHandler(this.BolumSefi_Load);
             ((System.ComponentModel.ISupportInitialize)(this.gridPersonel)).EndInit();

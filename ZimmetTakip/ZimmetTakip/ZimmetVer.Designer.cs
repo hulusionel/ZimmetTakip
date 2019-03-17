@@ -66,9 +66,9 @@
             // gridPersonel
             // 
             this.gridPersonel.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.gridPersonel.Location = new System.Drawing.Point(11, 77);
+            this.gridPersonel.Location = new System.Drawing.Point(11, 47);
             this.gridPersonel.Name = "gridPersonel";
-            this.gridPersonel.Size = new System.Drawing.Size(560, 326);
+            this.gridPersonel.Size = new System.Drawing.Size(560, 156);
             this.gridPersonel.TabIndex = 2;
             this.gridPersonel.SelectionChanged += new System.EventHandler(this.gridPersonel_SelectionChanged);
             // 
@@ -76,7 +76,7 @@
             // 
             this.btnZimmet.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnZimmet.Appearance.Options.UseFont = true;
-            this.btnZimmet.Location = new System.Drawing.Point(961, 434);
+            this.btnZimmet.Location = new System.Drawing.Point(983, 213);
             this.btnZimmet.Name = "btnZimmet";
             this.btnZimmet.Size = new System.Drawing.Size(82, 36);
             this.btnZimmet.TabIndex = 3;
@@ -87,7 +87,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label2.Location = new System.Drawing.Point(550, 25);
+            this.label2.Location = new System.Drawing.Point(616, 13);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(102, 16);
             this.label2.TabIndex = 0;
@@ -96,7 +96,7 @@
             // comboUrun
             // 
             this.comboUrun.FormattingEnabled = true;
-            this.comboUrun.Location = new System.Drawing.Point(652, 20);
+            this.comboUrun.Location = new System.Drawing.Point(718, 8);
             this.comboUrun.Name = "comboUrun";
             this.comboUrun.Size = new System.Drawing.Size(121, 21);
             this.comboUrun.TabIndex = 1;
@@ -105,9 +105,9 @@
             // gridUrun
             // 
             this.gridUrun.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.gridUrun.Location = new System.Drawing.Point(577, 77);
+            this.gridUrun.Location = new System.Drawing.Point(609, 47);
             this.gridUrun.Name = "gridUrun";
-            this.gridUrun.Size = new System.Drawing.Size(466, 326);
+            this.gridUrun.Size = new System.Drawing.Size(466, 131);
             this.gridUrun.TabIndex = 2;
             this.gridUrun.SelectionChanged += new System.EventHandler(this.gridUrun_SelectionChanged);
             // 
@@ -115,7 +115,7 @@
             // 
             this.lblSecilenPersonel.AutoSize = true;
             this.lblSecilenPersonel.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblSecilenPersonel.Location = new System.Drawing.Point(8, 416);
+            this.lblSecilenPersonel.Location = new System.Drawing.Point(8, 219);
             this.lblSecilenPersonel.Name = "lblSecilenPersonel";
             this.lblSecilenPersonel.Size = new System.Drawing.Size(118, 16);
             this.lblSecilenPersonel.TabIndex = 4;
@@ -125,7 +125,7 @@
             // 
             this.lblSecilenUrun.AutoSize = true;
             this.lblSecilenUrun.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblSecilenUrun.Location = new System.Drawing.Point(550, 416);
+            this.lblSecilenUrun.Location = new System.Drawing.Point(629, 205);
             this.lblSecilenUrun.Name = "lblSecilenUrun";
             this.lblSecilenUrun.Size = new System.Drawing.Size(92, 16);
             this.lblSecilenUrun.TabIndex = 4;
@@ -135,7 +135,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label5.Location = new System.Drawing.Point(550, 444);
+            this.label5.Location = new System.Drawing.Point(629, 233);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(183, 16);
             this.label5.TabIndex = 4;
@@ -143,7 +143,7 @@
             // 
             // txtZimmetlenecekUrunAdet
             // 
-            this.txtZimmetlenecekUrunAdet.Location = new System.Drawing.Point(739, 439);
+            this.txtZimmetlenecekUrunAdet.Location = new System.Drawing.Point(818, 228);
             this.txtZimmetlenecekUrunAdet.Name = "txtZimmetlenecekUrunAdet";
             this.txtZimmetlenecekUrunAdet.Size = new System.Drawing.Size(78, 21);
             this.txtZimmetlenecekUrunAdet.TabIndex = 5;
@@ -152,7 +152,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label3.Location = new System.Drawing.Point(550, 462);
+            this.label3.Location = new System.Drawing.Point(629, 251);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(232, 13);
             this.label3.TabIndex = 4;
@@ -177,7 +177,7 @@
             this.Controls.Add(this.comboPersonel);
             this.Controls.Add(this.label1);
             this.Name = "ZimmetVer";
-            this.Size = new System.Drawing.Size(1070, 492);
+            this.Size = new System.Drawing.Size(1128, 348);
             this.Load += new System.EventHandler(this.ZimmetVer_Load);
             ((System.ComponentModel.ISupportInitialize)(this.gridPersonel)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridUrun)).EndInit();

@@ -37,7 +37,7 @@
             // gridPersonel
             // 
             this.gridPersonel.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.gridPersonel.Location = new System.Drawing.Point(15, 19);
+            this.gridPersonel.Location = new System.Drawing.Point(12, 16);
             this.gridPersonel.Name = "gridPersonel";
             this.gridPersonel.Size = new System.Drawing.Size(554, 297);
             this.gridPersonel.TabIndex = 0;
@@ -54,7 +54,7 @@
             // 
             // btnPersonelCikar
             // 
-            this.btnPersonelCikar.Location = new System.Drawing.Point(15, 362);
+            this.btnPersonelCikar.Location = new System.Drawing.Point(481, 319);
             this.btnPersonelCikar.Name = "btnPersonelCikar";
             this.btnPersonelCikar.Size = new System.Drawing.Size(85, 23);
             this.btnPersonelCikar.TabIndex = 2;

@@ -19,9 +19,7 @@ namespace ZimmetTakip
         }
 
         private void btnEkle_Click(object sender, EventArgs e)
-        {
-          
-
+        {         
             panelOrta.Controls.Clear();
             PersonelEkle ekle = new PersonelEkle();
             panelOrta.Controls.Add(ekle);
@@ -47,6 +45,15 @@ namespace ZimmetTakip
             panelOrta.Controls.Add(cikar);
             cikar.Show();
             cikar.Dock = DockStyle.Fill;
+        }
+
+        private void Admin_Load(object sender, EventArgs e)
+        {
+            panelOrta.Controls.Clear();
+            Listele ekle = new Listele();
+            panelOrta.Controls.Add(ekle);
+            ekle.Show();
+            ekle.Dock = DockStyle.Fill;
         }
     }
 }
