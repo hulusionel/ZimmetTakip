@@ -35,9 +35,9 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.lblHatalıGiris = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.lblHatalıGiris = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -64,23 +64,29 @@
             this.txtName.AccessibleName = "";
             this.txtName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.txtName.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtName.Location = new System.Drawing.Point(66, 198);
+            this.txtName.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold);
+            this.txtName.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.txtName.Location = new System.Drawing.Point(97, 199);
+            this.txtName.MaxLength = 15;
             this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(165, 14);
+            this.txtName.Size = new System.Drawing.Size(110, 17);
             this.txtName.TabIndex = 1;
             this.txtName.Tag = "";
             this.txtName.Text = "Hulusi";
+            this.txtName.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtName_KeyPress);
             // 
             // txtPassword
             // 
             this.txtPassword.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.txtPassword.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtPassword.Location = new System.Drawing.Point(66, 232);
+            this.txtPassword.Location = new System.Drawing.Point(97, 239);
+            this.txtPassword.MaxLength = 4;
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.PasswordChar = '*';
-            this.txtPassword.Size = new System.Drawing.Size(165, 14);
+            this.txtPassword.Size = new System.Drawing.Size(83, 14);
             this.txtPassword.TabIndex = 1;
-            this.txtPassword.Text = "1";
+            this.txtPassword.Text = "1012";
+            this.txtPassword.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPassword_KeyPress);
             // 
             // pictureBox1
             // 
@@ -121,26 +127,6 @@
             this.panel1.Size = new System.Drawing.Size(291, 389);
             this.panel1.TabIndex = 4;
             // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.ForeColor = System.Drawing.Color.Blue;
-            this.label3.Location = new System.Drawing.Point(47, 241);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(199, 13);
-            this.label3.TabIndex = 5;
-            this.label3.Text = "------------------------------------------------";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.ForeColor = System.Drawing.Color.Blue;
-            this.label2.Location = new System.Drawing.Point(47, 213);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(199, 13);
-            this.label2.TabIndex = 5;
-            this.label2.Text = "------------------------------------------------";
-            // 
             // lblHatalıGiris
             // 
             this.lblHatalıGiris.AutoSize = true;
@@ -149,6 +135,26 @@
             this.lblHatalıGiris.Name = "lblHatalıGiris";
             this.lblHatalıGiris.Size = new System.Drawing.Size(0, 13);
             this.lblHatalıGiris.TabIndex = 6;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.ForeColor = System.Drawing.Color.Blue;
+            this.label3.Location = new System.Drawing.Point(94, 248);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(111, 13);
+            this.label3.TabIndex = 5;
+            this.label3.Text = "--------------------------";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.ForeColor = System.Drawing.Color.Blue;
+            this.label2.Location = new System.Drawing.Point(94, 215);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(111, 13);
+            this.label2.TabIndex = 5;
+            this.label2.Text = "--------------------------";
             // 
             // Login
             // 

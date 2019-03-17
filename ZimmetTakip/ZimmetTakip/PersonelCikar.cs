@@ -31,7 +31,7 @@ namespace ZimmetTakip
 
         private void gridPersonel_SelectionChanged(object sender, EventArgs e)
         {
-            lblPersonel.Text="Seçilen Personel: "+gridPersonel.CurrentRow.Cells[1].Value.ToString() +" "+ gridPersonel.CurrentRow.Cells[2].Value.ToString();//alttaki labele çıkarılmak için seçilen personel ismi yazıldı
+            //lblPersonel.Text="Seçilen Personel: "+gridPersonel.CurrentRow.Cells[1].Value.ToString() +" "+ gridPersonel.CurrentRow.Cells[2].Value.ToString();//alttaki labele çıkarılmak için seçilen personel ismi yazıldı
         }
 
         private void btnPersonelCikar_Click(object sender, EventArgs e)
@@ -59,6 +59,14 @@ namespace ZimmetTakip
                 MessageBox.Show("Personel Silindi (MESELA YAANİ)");
             }
             
+        }
+
+        private void gridPersonel_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if(e.RowIndex>-1)
+            { 
+                lblPersonel.Text = "Seçilen Personel: " + gridPersonel.Rows[e.RowIndex].Cells[1].Value.ToString() + " " + gridPersonel.Rows[e.RowIndex].Cells[2].Value.ToString();//alttaki labele çıkarılmak için seçilen personel ismi yazıldı
+            }
         }
     }
 }

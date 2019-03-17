@@ -36,5 +36,23 @@ namespace ZimmetTakip
             txtFiyat.Text = "";
             txtAdet.Text = "";
         }
+
+        private void txtMarka_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = !(char.IsLetter(e.KeyChar) || e.KeyChar == (char)Keys.Back);
+        }
+
+        private void txtModel_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = !(char.IsLetter(e.KeyChar) || e.KeyChar == (char)Keys.Back);
+        }
+
+        private void txtFiyat_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if(!char.IsDigit(e.KeyChar)&& e.KeyChar!=8)
+            {
+                e.Handled = true;
+            }
+        }
     }
 }

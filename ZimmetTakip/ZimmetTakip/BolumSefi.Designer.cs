@@ -59,6 +59,7 @@
             this.gridPersonel.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.gridPersonel.Size = new System.Drawing.Size(546, 228);
             this.gridPersonel.TabIndex = 1;
+            this.gridPersonel.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gridPersonel_CellClick);
             this.gridPersonel.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.gridPersonel_CellMouseDoubleClick);
             this.gridPersonel.SelectionChanged += new System.EventHandler(this.gridPersonel_SelectionChanged);
             // 

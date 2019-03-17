@@ -40,8 +40,7 @@ namespace ZimmetTakip
                             if (Convert.ToUInt32(loginDs.Tables[0].Rows[0]["Departman_Id"].ToString()) == 3)
                             {
                                 StokTakipSorumlusu stokTakip = new StokTakipSorumlusu();
-                                stokTakip.Show();
-                                
+                                stokTakip.Show();                               
                             }
                             else
                             {
@@ -63,6 +62,19 @@ namespace ZimmetTakip
             }
             catch { }
 
+        }
+
+        private void txtName_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = !(char.IsLetter(e.KeyChar) || e.KeyChar == (char)Keys.Back);
+        }
+
+        private void txtPassword_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsDigit(e.KeyChar) && e.KeyChar != 8)
+            {
+                e.Handled = true;
+            }
         }
 
         private void label1_Click(object sender, EventArgs e)

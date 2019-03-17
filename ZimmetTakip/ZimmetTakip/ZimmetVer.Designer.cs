@@ -48,7 +48,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label1.Location = new System.Drawing.Point(8, 25);
+            this.label1.Location = new System.Drawing.Point(20, 15);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(112, 16);
             this.label1.TabIndex = 0;
@@ -56,8 +56,9 @@
             // 
             // comboPersonel
             // 
+            this.comboPersonel.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboPersonel.FormattingEnabled = true;
-            this.comboPersonel.Location = new System.Drawing.Point(119, 20);
+            this.comboPersonel.Location = new System.Drawing.Point(131, 13);
             this.comboPersonel.Name = "comboPersonel";
             this.comboPersonel.Size = new System.Drawing.Size(121, 21);
             this.comboPersonel.TabIndex = 1;
@@ -73,6 +74,7 @@
             this.gridPersonel.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.gridPersonel.Size = new System.Drawing.Size(560, 156);
             this.gridPersonel.TabIndex = 2;
+            this.gridPersonel.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gridPersonel_CellClick);
             this.gridPersonel.SelectionChanged += new System.EventHandler(this.gridPersonel_SelectionChanged);
             // 
             // btnZimmet
@@ -98,8 +100,9 @@
             // 
             // comboUrun
             // 
+            this.comboUrun.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboUrun.FormattingEnabled = true;
-            this.comboUrun.Location = new System.Drawing.Point(718, 8);
+            this.comboUrun.Location = new System.Drawing.Point(718, 11);
             this.comboUrun.Name = "comboUrun";
             this.comboUrun.Size = new System.Drawing.Size(121, 21);
             this.comboUrun.TabIndex = 1;
@@ -115,6 +118,7 @@
             this.gridUrun.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.gridUrun.Size = new System.Drawing.Size(466, 131);
             this.gridUrun.TabIndex = 2;
+            this.gridUrun.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gridUrun_CellClick);
             this.gridUrun.SelectionChanged += new System.EventHandler(this.gridUrun_SelectionChanged);
             // 
             // lblSecilenPersonel
@@ -150,6 +154,7 @@
             // txtZimmetlenecekUrunAdet
             // 
             this.txtZimmetlenecekUrunAdet.Location = new System.Drawing.Point(818, 228);
+            this.txtZimmetlenecekUrunAdet.MaxLength = 3;
             this.txtZimmetlenecekUrunAdet.Name = "txtZimmetlenecekUrunAdet";
             this.txtZimmetlenecekUrunAdet.Size = new System.Drawing.Size(78, 21);
             this.txtZimmetlenecekUrunAdet.TabIndex = 5;

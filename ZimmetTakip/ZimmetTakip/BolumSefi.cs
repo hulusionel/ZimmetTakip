@@ -38,7 +38,15 @@ namespace ZimmetTakip
 
         private void gridPersonel_SelectionChanged(object sender, EventArgs e)
         {
-            secilenPersonelId = gridPersonel.CurrentRow.Cells[0].Value.ToString();
+           // secilenPersonelId = gridPersonel.CurrentRow.Cells[0].Value.ToString();
+        }
+
+        private void gridPersonel_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex > -1)
+            { 
+                secilenPersonelId = gridPersonel.Rows[e.RowIndex].Cells[0].Value.ToString();
+            }
         }
 
         private void gridPersonel_CellMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)

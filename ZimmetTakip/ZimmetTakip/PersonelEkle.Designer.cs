@@ -37,20 +37,25 @@
             this.btnPersonelEkle = new DevExpress.XtraEditors.SimpleButton();
             this.txtPersonelSoyad = new DevExpress.XtraEditors.TextEdit();
             this.txtPersonelAd = new DevExpress.XtraEditors.TextEdit();
+            this.lblHata = new System.Windows.Forms.Label();
+            this.lblHata2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.txtPersonelSoyad.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtPersonelAd.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // comboGorev
             // 
+            this.comboGorev.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboGorev.FormattingEnabled = true;
             this.comboGorev.Location = new System.Drawing.Point(117, 159);
             this.comboGorev.Name = "comboGorev";
             this.comboGorev.Size = new System.Drawing.Size(121, 21);
             this.comboGorev.TabIndex = 23;
+            this.comboGorev.SelectedIndexChanged += new System.EventHandler(this.comboGorev_SelectedIndexChanged);
             // 
             // comboDepartman
             // 
+            this.comboDepartman.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboDepartman.FormattingEnabled = true;
             this.comboDepartman.Location = new System.Drawing.Point(117, 114);
             this.comboDepartman.Name = "comboDepartman";
@@ -102,20 +107,44 @@
             // 
             this.txtPersonelSoyad.Location = new System.Drawing.Point(118, 79);
             this.txtPersonelSoyad.Name = "txtPersonelSoyad";
+            this.txtPersonelSoyad.Properties.MaxLength = 10;
             this.txtPersonelSoyad.Size = new System.Drawing.Size(120, 20);
             this.txtPersonelSoyad.TabIndex = 15;
+            this.txtPersonelSoyad.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPersonelSoyad_KeyPress);
             // 
             // txtPersonelAd
             // 
             this.txtPersonelAd.Location = new System.Drawing.Point(118, 40);
             this.txtPersonelAd.Name = "txtPersonelAd";
+            this.txtPersonelAd.Properties.MaxLength = 15;
             this.txtPersonelAd.Size = new System.Drawing.Size(120, 20);
             this.txtPersonelAd.TabIndex = 16;
+            this.txtPersonelAd.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPersonelAd_KeyPress);
+            // 
+            // lblHata
+            // 
+            this.lblHata.AutoSize = true;
+            this.lblHata.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.lblHata.Location = new System.Drawing.Point(244, 43);
+            this.lblHata.Name = "lblHata";
+            this.lblHata.Size = new System.Drawing.Size(0, 13);
+            this.lblHata.TabIndex = 24;
+            // 
+            // lblHata2
+            // 
+            this.lblHata2.AutoSize = true;
+            this.lblHata2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.lblHata2.Location = new System.Drawing.Point(244, 82);
+            this.lblHata2.Name = "lblHata2";
+            this.lblHata2.Size = new System.Drawing.Size(0, 13);
+            this.lblHata2.TabIndex = 25;
             // 
             // PersonelEkle
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.lblHata2);
+            this.Controls.Add(this.lblHata);
             this.Controls.Add(this.comboGorev);
             this.Controls.Add(this.comboDepartman);
             this.Controls.Add(this.labelControl4);
@@ -146,5 +175,7 @@
         private DevExpress.XtraEditors.SimpleButton btnPersonelEkle;
         private DevExpress.XtraEditors.TextEdit txtPersonelSoyad;
         private DevExpress.XtraEditors.TextEdit txtPersonelAd;
+        private System.Windows.Forms.Label lblHata;
+        private System.Windows.Forms.Label lblHata2;
     }
 }

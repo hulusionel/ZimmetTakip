@@ -112,6 +112,31 @@ namespace ZimmetTakip
             gridUrun.AllowUserToAddRows = false;
         }
 
+        private void gridPersonel_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex > -1)
+            {              
+                lblSecilenPersonel.Text = "Seçilen Personel: " + gridPersonel.Rows[e.RowIndex].Cells[1].Value.ToString() + " " + gridPersonel.Rows[e.RowIndex].Cells[2].Value.ToString();
+                string al = gridPersonel.Rows[e.RowIndex].Cells[0].Value.ToString();
+
+                DataSet secilenPer = islem.VeriCekDs("SELECT * FROM tbl_Personel WHERE Personel_Id='" + al + "'");
+                secilenPersonelId = secilenPer.Tables[0].Rows[0]["Personel_Id"].ToString();
+                secilenPersonelDepartmanId = secilenPer.Tables[0].Rows[0]["Departman_Id"].ToString();
+            }
+        }
+
+        private void gridUrun_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex > -1)
+            {
+                lblSecilenUrun.Text = "Seçilen Ürün: " + gridUrun.Rows[e.RowIndex].Cells[1].Value.ToString();
+                string al = gridUrun.Rows[e.RowIndex].Cells[0].Value.ToString();
+
+                DataSet secilenUr = islem.VeriCekDs("SELECT * FROM tbl_Stok WHERE Urun_Kullanilabilirlik ='" + 1 + "' AND Urun_Id='" + al + "'");
+                secilenUrunId = secilenUr.Tables[0].Rows[0]["Urun_Id"].ToString();
+            }
+        }
+
         private void comboPersonel_SelectedIndexChanged(object sender, EventArgs e)
         {
             string comboGelenDeger = (comboPersonel.SelectedIndex +1).ToString(); //DENEMEK İÇİN
@@ -122,6 +147,7 @@ namespace ZimmetTakip
 
         private void gridPersonel_SelectionChanged(object sender, EventArgs e)
         {
+            /*
             lblSecilenPersonel.Text = "Seçilen Personel: " + gridPersonel.CurrentRow.Cells[1].Value.ToString() + " " + gridPersonel.CurrentRow.Cells[2].Value.ToString();
             string al=gridPersonel.CurrentRow.Cells[0].Value.ToString();
 
@@ -129,14 +155,17 @@ namespace ZimmetTakip
             DataSet secilenPer = islem.VeriCekDs("SELECT * FROM tbl_Personel WHERE Personel_Id='" + al + "'");
             secilenPersonelId = secilenPer.Tables[0].Rows[0]["Personel_Id"].ToString();
             secilenPersonelDepartmanId = secilenPer.Tables[0].Rows[0]["Departman_Id"].ToString();
+            */
         }
 
         private void gridUrun_SelectionChanged(object sender, EventArgs e)
         {
+            /*
             lblSecilenUrun.Text = "Seçilen Ürün: " + gridUrun.CurrentRow.Cells[2].Value.ToString();
             string al = gridUrun.CurrentRow.Cells[0].Value.ToString();
             DataSet secilenUr = islem.VeriCekDs("SELECT * FROM tbl_Stok WHERE Urun_Kullanilabilirlik ='" + 1+ "' AND Urun_Id='" + al + "'");
             secilenUrunId = secilenUr.Tables[0].Rows[0]["Urun_Id"].ToString();
+            */
         }
     }
 }

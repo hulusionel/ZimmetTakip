@@ -37,5 +37,15 @@ namespace ZimmetTakip
             zimmet.Dock = DockStyle.Fill;
             zimmet.BringToFront();
         }
+
+        private void StokTakipSorumlusu_Load(object sender, EventArgs e)
+        {
+            panelOrta.Controls.Clear();
+            ZimmetVer zimmet = new ZimmetVer();
+            panelOrta.Controls.Add(zimmet);
+            zimmet.Show();
+            zimmet.Dock = DockStyle.Fill;
+            zimmet.BringToFront();
+        }
     }
 }

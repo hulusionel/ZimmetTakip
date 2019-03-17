@@ -44,6 +44,7 @@
             this.gridPersonel.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.gridPersonel.Size = new System.Drawing.Size(554, 297);
             this.gridPersonel.TabIndex = 0;
+            this.gridPersonel.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gridPersonel_CellClick);
             this.gridPersonel.SelectionChanged += new System.EventHandler(this.gridPersonel_SelectionChanged);
             // 
             // lblPersonel
@@ -72,7 +73,7 @@
             this.Controls.Add(this.lblPersonel);
             this.Controls.Add(this.gridPersonel);
             this.Name = "PersonelCikar";
-            this.Size = new System.Drawing.Size(595, 406);
+            this.Size = new System.Drawing.Size(592, 406);
             this.Load += new System.EventHandler(this.PersonelCikar_Load);
             ((System.ComponentModel.ISupportInitialize)(this.gridPersonel)).EndInit();
             this.ResumeLayout(false);

@@ -21,10 +21,19 @@ namespace ZimmetTakip
 
         private void btnPersonelEkle_Click(object sender, EventArgs e)
         {
-            string ekleSQL = "INSERT INTO tbl_Personel(Personel_Ad, Personel_Soyad, Departman_Id, Gorev_Id, Calisma_Durumu) VALUES ('" + txtPersonelAd.Text.Trim() + "','" + txtPersonelSoyad.Text.Trim() + "','" + comboDepartman.SelectedValue + "','" + comboGorev.SelectedValue + "','"+1+"') ";
-            islem.Ekle(ekleSQL, "Personel Sisteme Başarı İle Eklendi.");
-            txtPersonelAd.Text = "";
-            txtPersonelSoyad.Text = "";
+            if (txtPersonelAd.Text != "" && txtPersonelSoyad.Text != "")
+            {
+                string ekleSQL = "INSERT INTO tbl_Personel(Personel_Ad, Personel_Soyad, Departman_Id, Gorev_Id, Calisma_Durumu) VALUES ('" + txtPersonelAd.Text.Trim() + "','" + txtPersonelSoyad.Text.Trim() + "','" + comboDepartman.SelectedValue + "','" + comboGorev.SelectedValue + "','" + 1 + "') ";
+                islem.Ekle(ekleSQL, "Personel Sisteme Başarı İle Eklendi.");
+                txtPersonelAd.Text = "";
+                txtPersonelSoyad.Text = "";
+            }
+            else
+            {
+
+                lblHata.Text = "*";
+                lblHata2.Text = "*";
+            }
         }
 
         private void PersonelEkle_Load(object sender, EventArgs e)
@@ -38,6 +47,21 @@ namespace ZimmetTakip
             comboGorev.ValueMember = "Gorev_Id";
             comboGorev.DisplayMember = "Gorev_Tanimi";
             comboGorev.DataSource = gorevDoldur.Tables[0];
+        }
+
+        private void txtPersonelAd_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = !(char.IsLetter(e.KeyChar) || e.KeyChar == (char)Keys.Back);
+        }
+
+        private void txtPersonelSoyad_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = !(char.IsLetter(e.KeyChar) || e.KeyChar == (char)Keys.Back);
+        }
+
+        private void comboGorev_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

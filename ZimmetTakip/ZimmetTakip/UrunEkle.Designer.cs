@@ -53,12 +53,15 @@
             // txtMarka
             // 
             this.txtMarka.Location = new System.Drawing.Point(113, 109);
+            this.txtMarka.MaxLength = 10;
             this.txtMarka.Name = "txtMarka";
             this.txtMarka.Size = new System.Drawing.Size(121, 21);
             this.txtMarka.TabIndex = 1;
+            this.txtMarka.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtMarka_KeyPress);
             // 
             // comboKategori
             // 
+            this.comboKategori.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboKategori.FormattingEnabled = true;
             this.comboKategori.Location = new System.Drawing.Point(113, 45);
             this.comboKategori.Name = "comboKategori";
@@ -86,9 +89,11 @@
             // txtModel
             // 
             this.txtModel.Location = new System.Drawing.Point(113, 136);
+            this.txtModel.MaxLength = 10;
             this.txtModel.Name = "txtModel";
             this.txtModel.Size = new System.Drawing.Size(121, 21);
             this.txtModel.TabIndex = 1;
+            this.txtModel.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtModel_KeyPress);
             // 
             // label4
             // 
@@ -102,9 +107,11 @@
             // txtFiyat
             // 
             this.txtFiyat.Location = new System.Drawing.Point(113, 163);
+            this.txtFiyat.MaxLength = 5;
             this.txtFiyat.Name = "txtFiyat";
             this.txtFiyat.Size = new System.Drawing.Size(121, 21);
             this.txtFiyat.TabIndex = 1;
+            this.txtFiyat.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtFiyat_KeyPress);
             // 
             // label5
             // 
@@ -118,6 +125,7 @@
             // txtAdet
             // 
             this.txtAdet.Location = new System.Drawing.Point(113, 190);
+            this.txtAdet.MaxLength = 3;
             this.txtAdet.Name = "txtAdet";
             this.txtAdet.Size = new System.Drawing.Size(121, 21);
             this.txtAdet.TabIndex = 1;

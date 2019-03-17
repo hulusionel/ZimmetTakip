@@ -42,7 +42,7 @@
             this.panelUst.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelUst.Location = new System.Drawing.Point(0, 0);
             this.panelUst.Name = "panelUst";
-            this.panelUst.Size = new System.Drawing.Size(964, 59);
+            this.panelUst.Size = new System.Drawing.Size(1105, 59);
             this.panelUst.TabIndex = 0;
             // 
             // btnZimmet
@@ -68,19 +68,20 @@
             this.panelOrta.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelOrta.Location = new System.Drawing.Point(0, 59);
             this.panelOrta.Name = "panelOrta";
-            this.panelOrta.Size = new System.Drawing.Size(964, 300);
+            this.panelOrta.Size = new System.Drawing.Size(1105, 300);
             this.panelOrta.TabIndex = 1;
             // 
             // StokTakipSorumlusu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(964, 359);
+            this.ClientSize = new System.Drawing.Size(1105, 359);
             this.Controls.Add(this.panelOrta);
             this.Controls.Add(this.panelUst);
             this.Name = "StokTakipSorumlusu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "StokTakipSorumlusu";
+            this.Load += new System.EventHandler(this.StokTakipSorumlusu_Load);
             this.panelUst.ResumeLayout(false);
             this.ResumeLayout(false);
 

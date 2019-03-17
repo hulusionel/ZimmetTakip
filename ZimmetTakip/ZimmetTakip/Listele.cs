@@ -34,6 +34,7 @@ namespace ZimmetTakip
             comboPersonelGorev.ValueMember = "Gorev_Id";
             comboPersonelGorev.DisplayMember = "Gorev_Tanimi";
             comboPersonelGorev.DataSource = gorevDoldur.Tables[0];
+            //gridPersonel.Rows[0].Cells[0].Selected = false;
 
         }
         public static string secilenId;
@@ -47,22 +48,41 @@ namespace ZimmetTakip
 
         private void simpleButton1_Click(object sender, EventArgs e)
         {
-            string PersonelGuncelle = "UPDATE tbl_Personel SET Personel_Ad='" + txtPersonelAd.Text.Trim() + "', Personel_Soyad='"+txtPersonelSoyad.Text.Trim()+"', Departman_Id='"+comboPersonelDepartman.SelectedValue+"', Gorev_Id='"+comboPersonelGorev.SelectedValue+"'WHERE Personel_Id='" + Convert.ToInt32(secilenId) + "'";
-            islem.Guncelle(PersonelGuncelle);
-            MessageBox.Show("Personel Başarı İle Güncellendi.");
-            DataTable goruntule = islem.VeriCekDt("SELECT * FROM v_PersonelListele");
-            gridPersonel.DataSource = goruntule;
-            gridPersonel.AllowUserToAddRows = false;
+            if (txtPersonelAd.Text != "" && txtPersonelSoyad.Text != "")
+            {
+                string PersonelGuncelle = "UPDATE tbl_Personel SET Personel_Ad='" + txtPersonelAd.Text.Trim() + "', Personel_Soyad='" + txtPersonelSoyad.Text.Trim() + "', Departman_Id='" + comboPersonelDepartman.SelectedValue + "', Gorev_Id='" + comboPersonelGorev.SelectedValue + "'WHERE Personel_Id='" + Convert.ToInt32(secilenId) + "'";
+                islem.Guncelle(PersonelGuncelle);
+                MessageBox.Show("Personel Başarı İle Güncellendi.");
+                DataTable goruntule = islem.VeriCekDt("SELECT * FROM v_PersonelListele");
+                gridPersonel.DataSource = goruntule;
+                gridPersonel.AllowUserToAddRows = false;
+            }
+            else
+            {
+                lblHata.Text = "*";
+                lblHata2.Text = "*";
+            }
+
         }
 
         private void gridPersonel_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             if(e.RowIndex>-1)
             {
-                txtPersonelAd.Text = gridPersonel.Rows[e.RowIndex].Cells[0].Value.ToString();
-                txtPersonelSoyad.Text = gridPersonel.Rows[e.RowIndex].Cells[1].Value.ToString();
+                txtPersonelAd.Text = gridPersonel.Rows[e.RowIndex].Cells[1].Value.ToString();
+                txtPersonelSoyad.Text = gridPersonel.Rows[e.RowIndex].Cells[2].Value.ToString();
                 secilenId = gridPersonel.Rows[e.RowIndex].Cells[0].Value.ToString();
             }
+        }
+
+        private void txtPersonelAd_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = !(char.IsLetter(e.KeyChar) || e.KeyChar == (char)Keys.Back);
+        }
+
+        private void txtPersonelSoyad_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = !(char.IsLetter(e.KeyChar) || e.KeyChar == (char)Keys.Back);
         }
     }
 }
